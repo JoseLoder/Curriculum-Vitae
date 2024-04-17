@@ -1,5 +1,5 @@
-import { MyFooter } from "../components/MyFooter";
 import { MyHeader } from "../components/MyHeader";
+import { MyFooter } from "../components/MyFooter";
 
 export function Experience() {
     return (
