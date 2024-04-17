@@ -5,6 +5,7 @@ export function MyMain({ children }) {
     return (
         <Box sx={{
             display: "flex",
+            flexDirection: "column",
             justifyContent: "flex-start",
             alignItems: "flex-start",
             height: "100vh",
