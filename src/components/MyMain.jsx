@@ -8,7 +8,6 @@ export function MyMain({ children }) {
             flexDirection: "column",
             justifyContent: "flex-start",
             alignItems: "flex-start",
-            height: "100vh",
         }} component={'main'}>
             {children}
         </Box>

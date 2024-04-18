@@ -16,8 +16,8 @@ export function MyFooter() {
             <Typography align="center" color="textSecondary" component="p">
                 <strong> Jose Miguel Martín Silva </strong> <br />
                 <strong> Full Stack Developer </strong> <br />
-                <strong> Call: </strong> +34 633 338 128 <br />
-                <strong> Email: </strong> martin_silva_jose@hotmail.com
+                <strong> Phone: </strong> +34 633 338 128 <br />
+                <strong> Email: </strong> martin.silva.jmms@gmail.com
             </Typography>
             <Typography align="center" color="textSecondary" component="p">
                 <strong> © 2024 created with: </strong><br />
