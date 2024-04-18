@@ -3,8 +3,9 @@ import { MyMain } from "../components/MyMain";
 import { MyFooter } from "../components/MyFooter";
 import { TDS } from "../components/TDS";
 
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { TD } from "../components/TD";
+import { HGroup } from "../components/HGroup";
 
 
 export function LandingPage() {
@@ -12,15 +13,13 @@ export function LandingPage() {
         <>
             <MyHeader />
             <MyMain>
-                <Typography variant="h2" component="h1" p={4}>
-                    HI THERE!
-                </Typography>
+                <HGroup firstTitle="¡HOLA, QUÉ HAY!" secondTitle="Bienvenidos a mi Portafolio," aditionalText="aquí podrás encontrar información sobre mí y mis proyectos." />
                 <Typography variant="p" p={4}>
-                    <ul>
-                        <li>
-                            <Typography variant="h3" component="h2" sx={{ marginBottom: "10px" }} >
-                                Presentación
-                            </Typography>
+                    <Box component='section'>
+                        <Typography variant="h4" component="h3" sx={{ marginBottom: "10px" }} >
+                            Presentación
+                        </Typography>
+                        <Box component='article' margin={'10px 20px 30px 30px'}>
                             <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
                                 Me llamo <TDS>José Miguel</TDS> y estoy en la recta final de mi aprendizaje como <TDS>Full Stack Developer</TDS>. No obstante ya me siento preparado en todos los aspectos para formar parte de una gran empresa como es la vuestra.
                             </Typography>
@@ -30,11 +29,10 @@ export function LandingPage() {
                             <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
                                 <TDS>Es por eso que soy Desarrollador Web Full-Stack.</TDS>
                             </Typography>
+                        </Box>
 
-                        </li>
-
-                        <li>
-                            <Typography variant="h3" component="h2" sx={{ marginBottom: "10px" }}>
+                        <Box component='section' >
+                            <Typography variant="h4" component="h3" sx={{ marginBottom: "10px" }} >
                                 Datos Personales
                             </Typography>
                             <ul>
@@ -77,10 +75,10 @@ export function LandingPage() {
 
                             </ul>
 
-                        </li>
+                        </Box>
 
-                        <li>
-                            <Typography variant="h3" component="h2" sx={{ marginBottom: "10px" }}>
+                        <Box component='section'>
+                            <Typography variant="h4" component="h3" sx={{ marginBottom: "10px" }} >
                                 Otros Datos
                             </Typography>
                             <ul>
@@ -112,10 +110,10 @@ export function LandingPage() {
 
                             </ul>
 
-                        </li>
-                    </ul>
+                        </Box>
+                    </Box>
                 </Typography>
-            </MyMain>
+            </MyMain >
             <MyFooter />
         </>
     );

@@ -3,15 +3,14 @@ import { MyFooter } from "../components/MyFooter";
 import { MyMain } from "../components/MyMain";
 import { Typography } from "@mui/material";
 import { ExperienceNoRelated } from "../components/ExperienceNoRelated";
+import { HGroup } from "../components/HGroup";
 
 export function Experience() {
     return (
         <>
             <MyHeader />
+            <HGroup firstTitle="! ALLÁ VAMOS !" secondTitle="Mi Recorrido . . ." aditionalText="En el mundo Profesional y Académico" />
             <MyMain>
-                <Typography variant="h2" component="h1" p={4}>
-                    HI THERE!
-                </Typography>
                 <Typography variant="p" p={4}>
                     <ul>
                         <li>Experiencia laboral relacionada</li>
