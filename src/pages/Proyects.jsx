@@ -11,13 +11,20 @@ export function Proyects() {
         <>
             <MyHeader />
             <MyMain>
-                <HGroup
-                    firstTitle="Lo más destacado . . ."
-                    secondTitle="¡Todos mis Proyectos!"
-                    aditionalText="Realizados con mucho esfuerzo y dedicación"
-                >
-
-                </HGroup>
+                <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+                    <HGroup
+                        firstTitle="Lo más destacado . . ."
+                        secondTitle="¡Todos mis Proyectos!"
+                        aditionalText="Realizados con mucho esfuerzo y dedicación"
+                    />
+                </Box>
+                <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+                    <HGroup
+                        firstTitle="Lo más dest- acado . ."
+                        secondTitle="¡Todos mis Proyectos!"
+                        aditionalText="Realizados con mucho esfuerzo y dedicación"
+                    />
+                </Box>
                 <Box
                     component={'section'}
                     sx={{

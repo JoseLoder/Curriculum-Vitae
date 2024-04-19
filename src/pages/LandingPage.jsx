@@ -3,7 +3,7 @@ import { MyMain } from "../components/MyMain";
 import { MyFooter } from "../components/MyFooter";
 import { TDS } from "../components/TDS";
 
-import { Typography } from "@mui/material";
+import { Box, ImageListItem, ImageListItemBar, Typography } from "@mui/material";
 import { HGroup } from "../components/HGroup";
 import { SectionBox } from "../components/SectionBox";
 
@@ -27,78 +27,98 @@ export function LandingPage() {
                     </Typography>
                 </SectionBox>
 
-                <SectionBox title="Datos Personales">
-                    <ul>
-                        <li>
-                            <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                <TDS>Nombre:</TDS> José Miguel Martín Silva
-                            </Typography>
-                        </li>
-                        <li>
-                            <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                <TDS>Fecha de Nacimiento:</TDS> 21 de Abril de 1997
-                            </Typography>
-                        </li>
-                        <li>
-                            <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                <TDS>Dirección:</TDS> Calle Hermanos Machado, Nº 5, 2º. Vícar,
-                                Almería, Andalucía.
-                            </Typography>
-                        </li>
-                        <li>
-                            <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                <TDS>Móvil:</TDS>  633 338 128
-                            </Typography>
-                        </li>
-                        <li>
-                            <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                <TDS>Email:</TDS> martin.silva.jmms@gmail.com
-                            </Typography>
-                        </li>
-                        <li>
-                            <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                <TDS>Linkedln:</TDS> www.linkedin.com/in/martin-silva-jose
-                            </Typography>
-                        </li>
-                        <li>
-                            <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                <TDS>Github:</TDS> MartinSilvaJose (github.com)
-                            </Typography>
-                        </li>
+                <Box sx={{ display: "flex", flexDirection: { xs: 'column', md: 'row' } }} >
 
-                    </ul>
-                </SectionBox>
 
-                <SectionBox title="Otros Datos">
-                    <ul>
-                        <li>
-                            <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                Carnet de conducir A y B.
-                            </Typography>
-                        </li>
-                        <li>
-                            <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                Vehículo propio.
-                            </Typography>
-                        </li>
-                        <li>
-                            <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                Movilidad geográfica.
-                            </Typography>
-                        </li>
-                        <li>
-                            <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                Responsable.
-                            </Typography>
-                        </li>
-                        <li>
-                            <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                Ganas de trabajar y de avanzar, tanto profesionalmente como académicamente.
-                            </Typography>
-                        </li>
+                    <ImageListItem sx={{ width: { xs: 250, md: 500 }, marginLeft: { xs: 0, md: 10 }, marginBottom: 10, alignSelf: 'center' }}>
+                        <img
+                            srcSet={`foto-personal-250.png 500w, foto-personal-500.png 1000w`}
+                            src="foto-personal-250.png"
+                            alt='José Miguel Martín Silva'
+                            loading="lazy"
+                        />
+                        <ImageListItemBar
+                            title='José Miguel Martín Silva'
+                            subtitle='Desarrollador Web Full-Stack'
+                        />
+                    </ImageListItem>
 
-                    </ul>
-                </SectionBox>
+
+                    <Box sx={{ marginLeft: { xs: 0, lg: 5 } }}>
+                        <SectionBox title="Datos Personales">
+                            <ul>
+                                <li>
+                                    <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
+                                        <TDS>Nombre:</TDS> José Miguel Martín Silva
+                                    </Typography>
+                                </li>
+
+                                <li>
+                                    <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
+                                        <TDS>Fecha de Nacimiento:</TDS> 21 de Abril de 1997
+                                    </Typography>
+                                </li>
+                                <li>
+                                    <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
+                                        <TDS>Dirección:</TDS> Calle Hermanos Machado, Nº 5, 2º. Vícar,
+                                        Almería, Andalucía.
+                                    </Typography>
+                                </li>
+                                <li>
+                                    <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
+                                        <TDS>Móvil:</TDS>  633 338 128
+                                    </Typography>
+                                </li>
+                                <li>
+                                    <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
+                                        <TDS>Email:</TDS> martin.silva.jmms@gmail.com
+                                    </Typography>
+                                </li>
+                                <li>
+                                    <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
+                                        <TDS>Linkedln:</TDS> www.linkedin.com/in/martin-silva-jose
+                                    </Typography>
+                                </li>
+                                <li>
+                                    <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
+                                        <TDS>Github:</TDS> MartinSilvaJose (github.com)
+                                    </Typography>
+                                </li>
+                            </ul>
+                        </SectionBox>
+
+                        <SectionBox title="Otros Datos">
+                            <ul>
+                                <li>
+                                    <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
+                                        Carnet de conducir A y B.
+                                    </Typography>
+                                </li>
+                                <li>
+                                    <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
+                                        Vehículo propio.
+                                    </Typography>
+                                </li>
+                                <li>
+                                    <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
+                                        Movilidad geográfica.
+                                    </Typography>
+                                </li>
+                                <li>
+                                    <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
+                                        Responsable.
+                                    </Typography>
+                                </li>
+                                <li>
+                                    <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
+                                        Ganas de trabajar y de avanzar, tanto profesionalmente como académicamente.
+                                    </Typography>
+                                </li>
+                            </ul>
+                        </SectionBox>
+
+                    </Box>
+                </Box>
             </MyMain >
             <MyFooter />
         </>

@@ -6,15 +6,18 @@ import { SectionBox } from "../components/SectionBox";
 import { AccordionFirstLevel } from "../components/AccordionFirstLevel";
 import { AccordionSecondLevel } from "../components/AccordionSecondLevel";
 
-
-import { ExperienceNoRelated } from "../components/ExperienceNoRelated";
 import AgricultureIcon from '@mui/icons-material/Agriculture';
 import OutdoorGrillIcon from '@mui/icons-material/OutdoorGrill';
 import FactoryIcon from '@mui/icons-material/Factory';
 import StoreIcon from '@mui/icons-material/Store';
-import SettingsSystemDaydreamIcon from '@mui/icons-material/SettingsSystemDaydream';
+import CoPresentIcon from '@mui/icons-material/CoPresent';
+import ConnectedTvIcon from '@mui/icons-material/ConnectedTv';
+import WebIcon from '@mui/icons-material/Web';
+import LaunchIcon from '@mui/icons-material/Launch';
+
 import { Box, List, ListItem, ListItemText } from "@mui/material";
 import { CardTechnology } from "../components/CardTechnology";
+import { CustomLink } from "../components/CustomLink";
 
 
 export function Experience() {
@@ -24,7 +27,7 @@ export function Experience() {
             <HGroup firstTitle="! ALLÁ VAMOS !" secondTitle="Mi Recorrido . . ." aditionalText="En el mundo Profesional y Académico" />
             <MyMain>
                 <SectionBox title="Experiencia Laboral Relacionada" >
-                    <AccordionFirstLevel icon={<SettingsSystemDaydreamIcon />} sector="SMR" skills="Soldadura de Componentes, Configuración de Impresoras y Reparaciones, Leer Documentación Técnica, . . .">
+                    <AccordionFirstLevel icon={<ConnectedTvIcon />} sector="SMR" skills="Soldadura de Componentes, Configuración de Impresoras y Reparaciones, Leer Documentación Técnica, . . .">
                         <AccordionSecondLevel
                             job="Técnico SMR"
                             time="Octubre 2021 - Enero 2022"
@@ -113,7 +116,7 @@ export function Experience() {
                 </SectionBox>
 
                 <SectionBox title="Formación Académica, Cursos y Otras Acreditaciones" >
-                    <AccordionFirstLevel icon={<SettingsSystemDaydreamIcon />} sector="DAW" skills="Desarrollo de Aplicaciones Web">
+                    <AccordionFirstLevel icon={<WebIcon />} sector="DAW" skills="Desarrollo de Aplicaciones Web">
                         <List sx={{ padding: 0 }}>
                             <ListItem>
                                 <ListItemText primary="Configurar y explotar sistemas informáticos, adaptando la configuración lógica del sistema según las necesidades de uso y los criterios establecidos." />
@@ -132,7 +135,7 @@ export function Experience() {
                             </ListItem>
                         </List>
                     </AccordionFirstLevel>
-                    <AccordionFirstLevel icon={<SettingsSystemDaydreamIcon />} sector="SMR" skills="Sistemas Microinformáticos y Redes">
+                    <AccordionFirstLevel icon={<ConnectedTvIcon />} sector="SMR" skills="Sistemas Microinformáticos y Redes">
                         <List sx={{ padding: 0 }}>
                             <ListItem>
                                 <ListItemText primary="Instalar, configurar y mantener servicios multiusuario, aplicaciones y dispositivos compartidos en un entorno de red local." />
@@ -157,32 +160,96 @@ export function Experience() {
                             </ListItem>
                         </List>
                     </AccordionFirstLevel>
-                    <AccordionFirstLevel icon={<SettingsSystemDaydreamIcon />} sector="Cursos de OpenWebinar" >
+                    <AccordionFirstLevel icon={<CoPresentIcon />} sector="Cursos de OpenWebinar" >
                         <List sx={{ padding: 0 }}>
                             <ListItem>
-                                <ListItemText primary="JavaScript Principiante e Intermedio" />
+                                <ListItemText
+                                    primary={[
+                                        "JavaScript ",
+                                        <CustomLink
+                                            key="1"
+                                            href="https://openwebinars.net/cert/KrgF"
+                                        >
+                                            {'Principiante'}
+                                        </CustomLink>,
+                                        " e ",
+                                        <CustomLink
+                                            key="2"
+                                            href="https://openwebinars.net/cert/mkSP"
+                                        >
+                                            {'Intermedio'}
+                                        </CustomLink>,
+                                    ]
+                                    }
+                                />
                             </ListItem>
                             <ListItem>
-                                <ListItemText primary="HTML 5 y CSS 3" />
+                                <ListItemText
+                                    primary={
+                                        <CustomLink href="https://openwebinars.net/cert/wQPJE">
+                                            {"HTML 5 y CSS 3"}
+                                        </CustomLink>
+                                    }
+                                />
                             </ListItem>
                             <ListItem>
-                                <ListItemText primary="Maquetación Web con CSS 3" />
+                                <ListItemText
+                                    primary={
+                                        <CustomLink href="https://openwebinars.net/cert/wQw2O">
+                                            {"Maquetación Web con CSS 3"}
+                                        </CustomLink>
+                                    }
+                                />
                             </ListItem>
                             <ListItem>
-                                <ListItemText primary="Responsive Web Design" />
+                                <ListItemText
+                                    primary={
+                                        <CustomLink href="https://openwebinars.net/cert/ODP92">
+                                            {"Transformaciones, Transitiones y Animaciones con CSS 3"}
+                                        </CustomLink>
+                                    }
+                                />
+                            </ListItem>
+
+                            <ListItem>
+                                <ListItemText
+                                    primary={
+                                        <CustomLink href="https://openwebinars.net/cert/wQw2O">
+                                            {"Responsive Web Design"}
+                                        </CustomLink>
+                                    }
+                                />
                             </ListItem>
                             <ListItem>
-                                <ListItemText primary="FlexBox y CSS Grid" />
+                                <ListItemText
+                                    primary={
+                                        <CustomLink href="https://openwebinars.net/cert/PBdJq">
+                                            {"FlexBox y CSS Grid"}
+                                        </CustomLink>
+                                    }
+                                />
                             </ListItem>
                             <ListItem>
-                                <ListItemText primary="Bootstrap 4: Maquetación Resposive y Layout" />
+                                <ListItemText
+                                    primary={
+                                        <CustomLink href="https://openwebinars.net/cert/wQw2O">
+                                            {"Bootstrap 4: Maquetación Resposive y Layout"}
+                                        </CustomLink>
+                                    }
+                                />
                             </ListItem>
                             <ListItem>
-                                <ListItemText primary="Servidor Web con Apache 2.4" />
+                                <ListItemText
+                                    primary={
+                                        <CustomLink href="https://openwebinars.net/cert/1pLp9">
+                                            {"Servidor Web con Apache 2.4"}
+                                        </CustomLink>
+                                    }
+                                />
                             </ListItem>
                         </List>
                     </AccordionFirstLevel>
-                    <AccordionFirstLevel icon={<SettingsSystemDaydreamIcon />} sector="Otros Cursos">
+                    <AccordionFirstLevel icon={<LaunchIcon />} sector="Otros Cursos">
                         <List sx={{ padding: 0 }}>
                             <ListItem>
                                 <ListItemText primary="Titulación de Socorrista" />
@@ -210,7 +277,6 @@ export function Experience() {
                             display: 'flex',
                             placeContent: 'center',
                             flexWrap: "wrap",
-                            m: 5,
                             gap: 5
                         }}
                     >
