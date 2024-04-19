@@ -1,9 +1,21 @@
 import { MyHeader } from "../components/MyHeader";
 import { MyFooter } from "../components/MyFooter";
 import { MyMain } from "../components/MyMain";
-import { Typography } from "@mui/material";
-import { ExperienceNoRelated } from "../components/ExperienceNoRelated";
 import { HGroup } from "../components/HGroup";
+import { SectionBox } from "../components/SectionBox";
+import { AccordionFirstLevel } from "../components/AccordionFirstLevel";
+import { AccordionSecondLevel } from "../components/AccordionSecondLevel";
+
+
+import { ExperienceNoRelated } from "../components/ExperienceNoRelated";
+import AgricultureIcon from '@mui/icons-material/Agriculture';
+import OutdoorGrillIcon from '@mui/icons-material/OutdoorGrill';
+import FactoryIcon from '@mui/icons-material/Factory';
+import StoreIcon from '@mui/icons-material/Store';
+import SettingsSystemDaydreamIcon from '@mui/icons-material/SettingsSystemDaydream';
+import { Box, List, ListItem, ListItemText } from "@mui/material";
+import { CardTechnology } from "../components/CardTechnology";
+
 
 export function Experience() {
     return (
@@ -11,220 +23,301 @@ export function Experience() {
             <MyHeader />
             <HGroup firstTitle="! ALLÁ VAMOS !" secondTitle="Mi Recorrido . . ." aditionalText="En el mundo Profesional y Académico" />
             <MyMain>
-                <Typography variant="p" p={4}>
-                    <ul>
-                        <li>Experiencia laboral relacionada</li>
-                        <ul>
-                            <li>Sistemas Microinformáticos y Redes {"(SMR)"}</li>
-                            <ul>
-                                <ExperienceNoRelated
-                                    desempeño="Técnico SMR"
-                                    duracion="Octubre 2021-Enero 2022"
-                                    ubicacion="Neotronics. Calle de la Sierra de Grazalema. Viator, Almería."
-                                    funcion="Formación en centros de trabajo (FCT)"
-                                />
-                            </ul>
-                        </ul>
-                        <li>Formación académica, cursos y otras acreditaciones</li>
-                        <ul>
-                            <li>FPGM SISTEMAS MICROINFORMÁTICOS Y REDES {"(SMR)"}</li>
-                            <ul>
-                                <li>
-                                    Instalar, configurar y mantener servicios multiusuario, aplicaciones y dispositivos compartidos en un entorno de red local.
-                                </li>
+                <SectionBox title="Experiencia Laboral Relacionada" >
+                    <AccordionFirstLevel icon={<SettingsSystemDaydreamIcon />} sector="SMR" skills="Soldadura de Componentes, Configuración de Impresoras y Reparaciones, Leer Documentación Técnica, . . .">
+                        <AccordionSecondLevel
+                            job="Técnico SMR"
+                            time="Octubre 2021 - Enero 2022"
+                            ubication="Neotronics. Calle de la Sierra de Grazalema. Viator, Almería."
+                            functions="Formación en centros de trabajo (FCT)"
+                        />
+                    </AccordionFirstLevel>
 
-                                <li>
-                                    Diagnosticar disfunciones en sistemas y redes mediante pruebas funcionales.
-                                </li>
-                                <li>
-                                    Determinar la logística asociada a las operaciones de instalación, configuración y mantenimiento de diversos sistemas microinformáticos.
-                                </li>
-                                <li>
-                                    Montar y configurar ordenadores y periféricos.
-                                </li>
+                </SectionBox>
+                <SectionBox title="Experiencia Laboral No Relacionada" >
 
-                                <li>
-                                    Replantear el cableado y la electrónica de redes locales en pequeños entornos y su conexión con redes de área extensa.
-                                </li>
+                    <AccordionFirstLevel icon={<AgricultureIcon />} sector="Agraria" skills="Trabajo duro, Resistencia, Constancia, Determinación, . . . ">
+                        <AccordionSecondLevel
+                            job="Peón Agrícola"
+                            time="Julio 2020 - Septiembre 2020"
+                            ubication="Centro de investigación de semillas Nuhems. El Ejido, Almería."
+                            functions="Labores agrícolas de los invernaderos externos e internos."
+                        />
+                        <AccordionSecondLevel
+                            job="Peón Agrícola"
+                            time="Noviembre 2018 - Enero 2019"
+                            ubication="Centro de investigación de semillas Nuhems. El Ejido, Almería."
+                            functions="Pesajes y control del desarrollo del pepino Squisito."
+                        />
+                    </AccordionFirstLevel>
+                    <AccordionFirstLevel icon={<OutdoorGrillIcon />} sector="Hostelería" skills="Responsabilidad, Trabajo en equipo, Control del estrés, Organización y Limpieza, . . . ">
+                        <AccordionSecondLevel
+                            job="Repartidor"
+                            time="Enero 2023 - Junio 2023"
+                            ubication="Popeyes Louisiana Kitchen. CC El Gran plaza. Roquetas de Mar, Almería."
+                            functions="Labores de reparto y preparación de pedidos. (Apoyo en cocina y limpieza.)"
+                        />
+                        <AccordionSecondLevel
+                            job="Encargado de cocina"
+                            time="Julio 2019 - Febrero 2020"
+                            ubication="Cafe Bar Miguel, Vicar, Almería."
+                            functions="Mantenimiento, preparación, elaboración y responsable del servicio."
+                        />
+                        <AccordionSecondLevel
+                            job="Ayudante de cocina"
+                            time="Enero 2019 - Mayo 2020"
+                            ubication="Cafe Bar La Lonja, Roquetas de Mar, Almería."
+                            functions="Encargado de la plancha."
+                        />
+                        <AccordionSecondLevel
+                            job="Cocinero"
+                            time="Noviembre 2017 - Agosto 2018"
+                            ubication="Cafe Bar Miguel, Vicar, Almería."
+                            functions="Preparación y elaboración de tapas."
+                        />
+                        <AccordionSecondLevel
+                            job="Ayudante de cocina"
+                            time="Julio 2017 - Septiembre 2017"
+                            ubication="Hotel Zoraida Park, Roquetas de Mar, Almería."
+                            functions="Encargado del Office y pinche del pasillo frío."
+                        />
+                    </AccordionFirstLevel>
+                    <AccordionFirstLevel icon={<FactoryIcon />} sector="Industria" skills="Responsabilidad en la Seguridad, Apoyo con el Equipo, Control de la Fátiga, Trabajo Sistemático y Metódico, . . . ">
+                        <AccordionSecondLevel
+                            job="Mozo de almacén"
+                            time="Noviembre 2023 - Marzo 2024"
+                            ubication="Grupo Hefame. Calle El Nogal, 16, Huércal de Almería, Almería."
+                            functions="Preparación y reposición de pedidos de productos farmacéuticos."
+                        />
+                        <AccordionSecondLevel
+                            job="Operario industrial"
+                            time="Julio 2023 - Octubre 2023"
+                            ubication="Sotrafa, Grupo Armando Álvarez. Carretera Nacional 340, El Ejido, Almería."
+                            functions="Preparación de pedidos de bovinas de plástico agrícola."
+                        />
+                    </AccordionFirstLevel>
+                    <AccordionFirstLevel icon={<StoreIcon />} sector="Reponedor" skills="Atención al Cliente, Resolución de Problemas, División de tareas, Gestión del tiempo, Control de Cálidad, Control de Stock,  . . .">
+                        <AccordionSecondLevel
+                            job="Frutero"
+                            time="Mayo 2022 - Noviembre 2022"
+                            ubication="Hipermercado Carrefour. CC El Copo. El Ejido, Almería."
+                            functions="Labores de reposición, atención al cliente y control de calidad del género (Apoyo en pescadería y charcutería)."
+                        />
+                        <AccordionSecondLevel
+                            job="Frutero"
+                            time="Julio 2021 - Septiembre 2021"
+                            ubication="Hipermercado Carrefour. CC Rincón de la Victoria, Málaga."
+                            functions="Labores de reposición, atención al cliente y control de calidad del género."
+                        />
+                    </AccordionFirstLevel>
+                </SectionBox>
 
-                                <li>
-                                    Instalar y configurar software básico y de aplicación, redes locales cableadas, inalámbricas o mixtas y conectadas a redes públicas.
-                                </li>
-
-                                <li>
-                                    Elaborar documentación técnica y administrativa del sistema, elaborar presupuestos y asesorar al cliente.
-                                </li>
-                            </ul>
-                            <li>FPGS DESARROLLO DE APLICACIONES WEB {"(DAW)"}</li>
-                            <ul>
-                                <li>
-                                    Configurar y explotar sistemas informáticos, adaptando la configuración lógica del sistema según las necesidades de uso y los criterios establecidos.
-                                </li>
-
-                                <li>
-                                    Aplicar técnicas y procedimientos relacionados con la seguridad en sistemas, servicios y aplicaciones, cumpliendo el plan de seguridad.
-                                </li>
-                                <li>
-                                    Gestionar servidores de aplicaciones adaptando su configuración en cada caso para permitir el despliegue de aplicaciones web.
-                                </li>
-                                <li>
-                                    Gestionar bases de datos, interpretando su diseño lógico y verificando integridad, consistencia, seguridad y accesibilidad de los datos.
-                                </li>
-
-                                <li>
-                                    Desarrollar aplicaciones web con acceso a bases de datos utilizando lenguajes, objetos de acceso y herramientas de mapeo adecuados a las especificaciones.
-                                </li>
-                            </ul>
-                            <li>Cursos OpenWebinar{"(TODO: Linkear enlaces a los diplomas en OpenWebinar con su curso)"}</li>
-                            <ul>
-                                <li>
-                                    Servidor Web con Apache 2.4.
-                                </li>
-
-                                <li>
-                                    HTML 5 y CSS 3.
-                                </li>
-                                <li>
-                                    Maquetación Web con CSS 3.
-                                </li>
-                                <li>
-                                    Responsive Web Design.
-                                </li>
-
-                                <li>
-                                    FlexBox y CSS Grid.
-                                </li>
-                                <li>
-                                    Bootstrap 4: Maquetación Resposive y Layout
-                                </li>
-                                <li>
-                                    JavaScript principiante e intermedio.
-                                </li>
-                            </ul>
-                            <li>
-                                Titulación de socorrista.
-                            </li>
-                            <li>
-                                Titulación de primeros auxilios.
-                            </li>
-                            <li>
-                                Titulación de reconocimiento, uso y manejo del equipo de oxigenoterapia.
-                            </li>
-                            <li>
-                                Titulación de manipulador de alimentos.
-                            </li>
-                            <li>
-                                Certificado de homologación en operador de carretillas de manutención de hasta 10.000 KG.
-                            </li>
-                        </ul>
-                        <li>Tecnologías</li>
-                        <ul>
-                            <li>HTML 5</li>
-                            <li>CSS 3</li>
-                            <li>Json</li>
-                            <li>Java</li>
-                            <li>JavaScript</li>
-                            <li>PHP</li>
-                            <li>MySQL</li>
-                            <li>Node.js</li>
-                            <li>React</li>
-                            <li>React Redux</li>
-                            <li>React Route</li>
-                            <li>Laravel</li>
-                            <li>Bootstrap 4</li>
-                            <li>Git</li>
-                            <li>GitHub</li>
-                            <li>Visual Studio Code</li>
-                            <li>Linux</li>
-                            <li>Windows</li>
-                        </ul>
-                        <li>Experiencia laboral no relacionada</li>
-                        <ul>
-                            <li>Agraria</li>
-                            <ul>
-                                <ExperienceNoRelated
-                                    desempeño="Peón Agrícola"
-                                    duracion="Julio 2020-Septiembre 2020"
-                                    ubicacion="Centro de investigación de semillas Nuhems. El Ejido, Almería."
-                                    funcion="Labores agrícolas de los invernaderos externos e internos. "
-                                />
-                                <ExperienceNoRelated
-                                    desempeño="Peón Agrícola"
-                                    duracion="Noviembre 2018-Enero 2019"
-                                    ubicacion="Centro de investigación de semillas Nuhems. El Ejido, Almería."
-                                    funcion="Pesajes y control del desarrollo del pepino Squisito."
-                                />
-                            </ul>
-                            <li>Hostelería</li>
-                            <ul>
-                                <ExperienceNoRelated
-                                    desempeño="Repartidor"
-                                    duracion="Enero 2023-Junio 2023"
-                                    ubicacion="Popeyes Louisiana Kitchen. CC El Gran plaza. Roquetas de Mar, Almería. "
-                                    funcion="Labores de reparto y preparación de pedidos. (Apoyo en cocina y limpieza.) "
-                                />
-                                <ExperienceNoRelated
-                                    desempeño="Encargado de cocina"
-                                    duracion="Julio 2019-Febrero 2020"
-                                    ubicacion="Cafe Bar Miguel, Vicar, Almería."
-                                    funcion=" Mantenimiento, preparación, elaboración y responsable del servicio."
-                                />
-                                <ExperienceNoRelated
-                                    desempeño="Ayudante de cocina"
-                                    duracion="Enero 2019-Mayo 2020"
-                                    ubicacion="Cafe Bar La Lonja, Roquetas de Mar, Almería."
-                                    funcion="Encargado de la plancha."
-                                />
-
-                                <ExperienceNoRelated
-                                    desempeño="Cocinero"
-                                    duracion="Noviembre 2017-Agosto 2018"
-                                    ubicacion="Cafe Bar Miguel, Vicar, Almería."
-                                    funcion="Preparación y elaboración de tapas."
-                                />
-
-                                <ExperienceNoRelated
-                                    desempeño="Ayudante de cocina"
-                                    duracion="Julio 2017-Septiembre 2017"
-                                    ubicacion="Hotel Zoraida Park, Roquetas de Mar, Almería."
-                                    funcion="Encargado del Office y pinche del pasillo frío."
-                                />
-                            </ul>
-                            <li>Industria</li>
-                            <ul>
-                                <ExperienceNoRelated
-                                    desempeño="Mozo de almacén"
-                                    duracion="Noviembre 2023-Marzo 2024"
-                                    ubicacion="Grupo Hefame. Calle El Nogal, 16, Huércal de Almería, Almería."
-                                    funcion="Preparación y reposición de pedidos de productos farmacéuticos"
-                                />
-                                <ExperienceNoRelated
-                                    desempeño="Operario industrial"
-                                    duracion="Julio 2023-Octubre 2023"
-                                    ubicacion="Sotrafa, Grupo Armando Álvarez. Carretera Nacional 340, El Ejido, Almería."
-                                    funcion="Preparación de pedidos de bovinas de plástico agrícola. "
-                                />
-
-                            </ul>
-                            <li>Reponedor</li>
-                            <ul>
-                                <ExperienceNoRelated
-                                    desempeño="Frutero"
-                                    duracion="Mayo 2022-Noviembre 2022"
-                                    ubicacion="Hipermercado Carrefour. CC El Copo. El Ejido, Almería."
-                                    funcion="Labores de reposición, atención al cliente y control de calidad del género (Apoyo en pescadería y charcutería). "
-                                />
-                                <ExperienceNoRelated
-                                    desempeño="Frutero"
-                                    duracion="Julio 2021-Septiembre 2021"
-                                    ubicacion="Hipermercado Carrefour. CC Rincón de la Victoria, Málaga. "
-                                    funcion="Labores de reposición, atención al cliente y control de calidad del género. "
-                                />
-                            </ul>
-                        </ul>
-                    </ul>
-
-                </Typography>
+                <SectionBox title="Formación Académica, Cursos y Otras Acreditaciones" >
+                    <AccordionFirstLevel icon={<SettingsSystemDaydreamIcon />} sector="DAW" skills="Desarrollo de Aplicaciones Web">
+                        <List sx={{ padding: 0 }}>
+                            <ListItem>
+                                <ListItemText primary="Configurar y explotar sistemas informáticos, adaptando la configuración lógica del sistema según las necesidades de uso y los criterios establecidos." />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="Aplicar técnicas y procedimientos relacionados con la seguridad en sistemas, servicios y aplicaciones, cumpliendo el plan de seguridad." />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="Gestionar servidores de aplicaciones adaptando su configuración en cada caso para permitir el despliegue de aplicaciones web." />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="Gestionar bases de datos, interpretando su diseño lógico y verificando integridad, consistencia, seguridad y accesibilidad de los datos." />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="Desarrollar aplicaciones web con acceso a bases de datos utilizando lenguajes, objetos de acceso y herramientas de mapeo adecuados a las especificaciones." />
+                            </ListItem>
+                        </List>
+                    </AccordionFirstLevel>
+                    <AccordionFirstLevel icon={<SettingsSystemDaydreamIcon />} sector="SMR" skills="Sistemas Microinformáticos y Redes">
+                        <List sx={{ padding: 0 }}>
+                            <ListItem>
+                                <ListItemText primary="Instalar, configurar y mantener servicios multiusuario, aplicaciones y dispositivos compartidos en un entorno de red local." />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="Diagnosticar disfunciones en sistemas y redes mediante pruebas funcionales." />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="Determinar la logística asociada a las operaciones de instalación, configuración y mantenimiento de diversos sistemas microinformáticos." />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="Montar y configurar ordenadores y periféricos." />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="Replantear el cableado y la electrónica de redes locales en pequeños entornos y su conexión con redes de área extensa." />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="Instalar y configurar software básico y de aplicación, redes locales cableadas, inalámbricas o mixtas y conectadas a redes públicas." />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="Elaborar documentación técnica y administrativa del sistema, elaborar presupuestos y asesorar al cliente." />
+                            </ListItem>
+                        </List>
+                    </AccordionFirstLevel>
+                    <AccordionFirstLevel icon={<SettingsSystemDaydreamIcon />} sector="Cursos de OpenWebinar" >
+                        <List sx={{ padding: 0 }}>
+                            <ListItem>
+                                <ListItemText primary="JavaScript Principiante e Intermedio" />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="HTML 5 y CSS 3" />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="Maquetación Web con CSS 3" />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="Responsive Web Design" />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="FlexBox y CSS Grid" />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="Bootstrap 4: Maquetación Resposive y Layout" />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="Servidor Web con Apache 2.4" />
+                            </ListItem>
+                        </List>
+                    </AccordionFirstLevel>
+                    <AccordionFirstLevel icon={<SettingsSystemDaydreamIcon />} sector="Otros Cursos">
+                        <List sx={{ padding: 0 }}>
+                            <ListItem>
+                                <ListItemText primary="Titulación de Socorrista" />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="Titulación de Primeros Auxilios" />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="Titulación de Reconocimiento, Uso y Manejo del Equipo de Oxigenoterapia" />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="Titulación de Manipulador de Alimentos" />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="Certificado de Homologación en Operador de Carretillas de Manutención de hasta 10.000 KG" />
+                            </ListItem>
+                        </List>
+                    </AccordionFirstLevel>
+                </SectionBox>
+                <SectionBox title="Tecnologías" >
+                    <Box
+                        component={'section'}
+                        sx={{
+                            alignSelf: 'center',
+                            display: 'flex',
+                            placeContent: 'center',
+                            flexWrap: "wrap",
+                            m: 5,
+                            gap: 5
+                        }}
+                    >
+                        <CardTechnology
+                            url="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                            image="/html-5.png"
+                            title="HTML 5"
+                            description="Es el código que se utiliza para estructurar y desplegar una página web y sus contenidos"
+                        />
+                        <CardTechnology
+                            url="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                            image="/css-3.png"
+                            title="CSS 3"
+                            description="Es el código que se utiliza para dar estilo a una página web y sus contenidos"
+                        />
+                        <CardTechnology
+                            url="https://www.json.org/json-en.html"
+                            image="/json.png"
+                            title="Json"
+                            description="Es un formato ligero de intercambio de datos"
+                        />
+                        <CardTechnology
+                            url="https://www.javascript.com/"
+                            image="/javascript.png"
+                            title="JavaScript"
+                            description="Es un lenguaje de programación que se utiliza para crear contenido interactivo en páginas web"
+                        />
+                        <CardTechnology
+                            url="https://www.php.net/"
+                            image="/php.png"
+                            title="PHP"
+                            description="Es un lenguaje de programación de uso general que se adapta especialmente al desarrollo web"
+                        />
+                        <CardTechnology
+                            url="https://www.mysql.com/"
+                            image="/mysql.png"
+                            title="MySQL"
+                            description="Es un sistema de gestión de bases de datos relacional"
+                        />
+                        <CardTechnology
+                            url="https://nodejs.org/"
+                            image="/nodejs.png"
+                            title="Node.js"
+                            description="Es un entorno de ejecución para JavaScript que permite ejecutar código JavaScript en el servidor"
+                        />
+                        <CardTechnology
+                            url="https://reactjs.org/"
+                            image="/react.png"
+                            title="React"
+                            description="Es una biblioteca de JavaScript para crear interfaces de usuario"
+                        />
+                        <CardTechnology
+                            url="https://redux.js.org/"
+                            image="/redux.png"
+                            title="React Redux"
+                            description="Es una biblioteca de JavaScript para manejar el estado de la aplicación"
+                        />
+                        <CardTechnology
+                            url="https://reactrouter.com/"
+                            image="/react-router.png"
+                            title="React Route"
+                            description="Es una biblioteca de JavaScript para manejar las rutas de la aplicación"
+                        />
+                        <CardTechnology
+                            url="https://laravel.com/"
+                            image="/laravel.png"
+                            title="Laravel"
+                            description="Es un framework de código abierto de PHP para el desarrollo de aplicaciones web"
+                        />
+                        <CardTechnology
+                            url="https://getbootstrap.com/"
+                            image="/bootstrap.png"
+                            title="Bootstrap 4"
+                            description="Es un framework de código abierto para el desarrollo de aplicaciones web"
+                        />
+                        <CardTechnology
+                            url="https://git-scm.com/"
+                            image="/git.png"
+                            title="Git"
+                            description="Es un sistema de control de versiones distribuido"
+                        />
+                        <CardTechnology
+                            url="https://github.com/"
+                            image="/github.png"
+                            title="GitHub"
+                            description="Es una plataforma de desarrollo colaborativo de software para alojar proyectos utilizando el sistema de control de versiones Git"
+                        />
+                        <CardTechnology
+                            url="https://code.visualstudio.com/"
+                            image="/visual-studio-code.png"
+                            title="Visual Studio Code"
+                            description="Es un editor de código fuente desarrollado por Microsoft para Windows, Linux y macOS"
+                        />
+                        <CardTechnology
+                            url="https://www.linux.org/"
+                            image="/linux.png"
+                            title="Linux"
+                            description="Es un sistema operativo de código abierto"
+                        />
+                        <CardTechnology
+                            url="https://www.microsoft.com/es-es/windows/"
+                            image="/windows.png"
+                            title="Windows"
+                            description="Es un sistema operativo de Microsoft"
+                        />
+                    </Box>
+                </SectionBox>
             </MyMain >
             <MyFooter />
         </>
