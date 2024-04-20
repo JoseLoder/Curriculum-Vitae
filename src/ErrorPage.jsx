@@ -1,12 +1,12 @@
-import { useRouteError, useHistory } from "react-router-dom";
+import { useRouteError, useNavigate } from "react-router-dom";
 
 export default function ErrorPage() {
     const error = useRouteError();
-    const history = useHistory();
+    const navigate = useNavigate();
     console.error(error);
 
     const redirectToLandingPage = () => {
-        history.push('/landingpage');
+        navigate('/landingpage');
     }
 
     return (
