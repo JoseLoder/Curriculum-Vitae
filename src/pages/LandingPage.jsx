@@ -6,7 +6,7 @@ import { TDS } from "../components/TDS";
 import { Box, ImageListItem, ImageListItemBar, Typography } from "@mui/material";
 import { HGroup } from "../components/HGroup";
 import { SectionBox } from "../components/SectionBox";
-
+import { CustomLink } from "../components/CustomLink";
 
 export function LandingPage() {
     return (
@@ -76,12 +76,12 @@ export function LandingPage() {
                                 </li>
                                 <li>
                                     <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                        <TDS>Linkedln:</TDS> www.linkedin.com/in/martin-silva-jose
+                                        <TDS>Linkedln:</TDS> <CustomLink href="www.linkedin.com/in/martin-silva-jose">www.linkedin.com/in/martin-silva-jose</CustomLink>
                                     </Typography>
                                 </li>
                                 <li>
                                     <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                        <TDS>Github:</TDS> MartinSilvaJose (github.com)
+                                        <TDS>Github:</TDS> <CustomLink href="https://github.com/MartinSilvaJose">MartinSilvaJose</CustomLink>
                                     </Typography>
                                 </li>
                             </ul>

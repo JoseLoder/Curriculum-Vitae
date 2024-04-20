@@ -78,6 +78,7 @@ export function Proyects() {
                         title="Connect 4"
                         description="Un proyecto realizado con React y JavaScript. Este juego es el clásico 4 en raya, donde puedes jugar contra un amigo, fué mi primer proyecto personal realizado con React."
                         code="https://github.com/MartinSilvaJose/Connect-4.git"
+                        demo="https://martinsilvajose.github.io/Connect-4/"
                     />
                     <CardProyect
                         firstImage='/first-web-site_1.png'
