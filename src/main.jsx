@@ -28,6 +28,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+import ErrorPage from './ErrorPage';
 import { LandingPage } from './pages/LandingPage';
 import { Proyects } from './pages/Proyects';
 import { Experience } from './pages/Experience';
@@ -36,14 +37,17 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <LandingPage />,
+    errorElement: <ErrorPage />,
   },
   {
     path: "/proyects",
     element: <Proyects />,
+    errorElement: <ErrorPage />,
   },
   {
     path: "/experience",
     element: <Experience />,
+    errorElement: <ErrorPage />,
   }
 ]);
 
