@@ -24,7 +24,8 @@ export const themeOptions = createTheme({
 
 /* React Router */
 import {
-  createBrowserRouter,
+  // createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 
@@ -32,9 +33,10 @@ import ErrorPage from './ErrorPage';
 import { LandingPage } from './pages/LandingPage';
 import { Proyects } from './pages/Proyects';
 import { Experience } from './pages/Experience';
-import App from './App';
+// import App from './App';
 
-const router = createBrowserRouter([
+// NEW REACT ROUTER
+const router = createHashRouter([
   {
     path: "/",
     element: <LandingPage />,
@@ -50,13 +52,32 @@ const router = createBrowserRouter([
     element: <Experience />,
     errorElement: <ErrorPage />,
   }
+
 ]);
+
+// OLD REACT ROUTER
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <LandingPage />,
+//     errorElement: <ErrorPage />,
+//   },
+//   {
+//     path: "/proyects",
+//     element: <Proyects />,
+//     errorElement: <ErrorPage />,
+//   },
+//   {
+//     path: "/experience",
+//     element: <Experience />,
+//     errorElement: <ErrorPage />,
+//   }
+// ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={themeOptions}>
       <CssBaseline />
-      {/* <App /> */}
       <RouterProvider router={router} />
     </ThemeProvider>
   </React.StrictMode>,

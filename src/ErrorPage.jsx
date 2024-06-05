@@ -6,7 +6,7 @@ export default function ErrorPage() {
     console.error(error);
 
     const redirectToLandingPage = () => {
-        navigate('/landingpage');
+        navigate('/');
     }
 
     return (
