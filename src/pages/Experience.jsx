@@ -281,22 +281,22 @@ export function Experience() {
                         }}
                     >
                         <CardTechnology
-                            url="https://developer.mozilla.org/en-US/docs/Web/HTML"
-                            image="/html-5.png"
-                            title="HTML 5"
-                            description="Es el código que se utiliza para estructurar y desplegar una página web y sus contenidos"
+                            url="https://reactjs.org/"
+                            image="/react.png"
+                            title="React"
+                            description="Es una biblioteca de JavaScript para crear interfaces de usuario"
                         />
                         <CardTechnology
-                            url="https://developer.mozilla.org/en-US/docs/Web/CSS"
-                            image="/css-3.png"
-                            title="CSS 3"
-                            description="Es el código que se utiliza para dar estilo a una página web y sus contenidos"
+                            url="https://laravel.com/"
+                            image="/laravel.png"
+                            title="Laravel"
+                            description="Es un framework de código abierto de PHP para el desarrollo de aplicaciones web"
                         />
                         <CardTechnology
-                            url="https://www.json.org/json-en.html"
-                            image="/json.png"
-                            title="Json"
-                            description="Es un formato ligero de intercambio de datos"
+                            url="https://www.java.com/es/"
+                            image="/java.png"
+                            title="Java"
+                            description="Es un lenguaje de programación de propósito general que se adapta especialmente a la programación orientada a objetos"
                         />
                         <CardTechnology
                             url="https://www.javascript.com/"
@@ -311,22 +311,40 @@ export function Experience() {
                             description="Es un lenguaje de programación de uso general que se adapta especialmente al desarrollo web"
                         />
                         <CardTechnology
+                            url="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                            image="/html-5.png"
+                            title="HTML 5"
+                            description="Es el código que se utiliza para estructurar y desplegar una página web y sus contenidos"
+                        />
+                        <CardTechnology
+                            url="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                            image="/css-3.png"
+                            title="CSS 3"
+                            description="Es el código que se utiliza para dar estilo a una página web y sus contenidos"
+                        />
+                        <CardTechnology
+                            url="https://openjfx.io/"
+                            image="/javafx.png"
+                            title="JavaFX"
+                            description="Es una biblioteca de software de gráficos y multimedia que permite a los desarrolladores de Java crear aplicaciones de escritorio con una interfaz gráfica de usuario rica y moderna"
+                        />
+                        <CardTechnology
+                            url="https://www.json.org/json-en.html"
+                            image="/json.png"
+                            title="Json"
+                            description="Es un formato ligero de intercambio de datos entre un servidor y un cliente o entre dos servidores"
+                        />
+                        <CardTechnology
                             url="https://www.mysql.com/"
                             image="/mysql.png"
                             title="MySQL"
-                            description="Es un sistema de gestión de bases de datos relacional"
+                            description="Es un sistema de gestión de bases de datos relacional, este sistema se utiliza para almacenar y gestionar los datos de un sitio web o aplicación"
                         />
                         <CardTechnology
                             url="https://nodejs.org/"
                             image="/nodejs.png"
                             title="Node.js"
                             description="Es un entorno de ejecución para JavaScript que permite ejecutar código JavaScript en el servidor"
-                        />
-                        <CardTechnology
-                            url="https://reactjs.org/"
-                            image="/react.png"
-                            title="React"
-                            description="Es una biblioteca de JavaScript para crear interfaces de usuario"
                         />
                         <CardTechnology
                             url="https://redux.js.org/"
@@ -339,12 +357,6 @@ export function Experience() {
                             image="/react-router.png"
                             title="React Route"
                             description="Es una biblioteca de JavaScript para manejar las rutas de la aplicación"
-                        />
-                        <CardTechnology
-                            url="https://laravel.com/"
-                            image="/laravel.png"
-                            title="Laravel"
-                            description="Es un framework de código abierto de PHP para el desarrollo de aplicaciones web"
                         />
                         <CardTechnology
                             url="https://getbootstrap.com/"
@@ -374,13 +386,13 @@ export function Experience() {
                             url="https://www.linux.org/"
                             image="/linux.png"
                             title="Linux"
-                            description="Es un sistema operativo de código abierto"
+                            description="Es un sistema operativo de código abierto, basado en Unix, que se utiliza en servidores y dispositivos embebidos gracias a su estabilidad y seguridad"
                         />
                         <CardTechnology
                             url="https://www.microsoft.com/es-es/windows/"
                             image="/windows.png"
                             title="Windows"
-                            description="Es un sistema operativo de Microsoft"
+                            description="Es un sistema operativo de Microsoft, el más utilizado en el mundo gracias a su facilidad de uso y compatibilidad con la mayoría de los programas"
                         />
                     </Box>
                 </SectionBox>

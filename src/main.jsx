@@ -32,6 +32,7 @@ import ErrorPage from './ErrorPage';
 import { LandingPage } from './pages/LandingPage';
 import { Proyects } from './pages/Proyects';
 import { Experience } from './pages/Experience';
+import App from './App';
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={themeOptions}>
       <CssBaseline />
+      {/* <App /> */}
       <RouterProvider router={router} />
     </ThemeProvider>
   </React.StrictMode>,
