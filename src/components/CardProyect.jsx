@@ -11,7 +11,18 @@ import { PropTypes } from "prop-types";
 import { useEffect, useState } from "react";
 
 export function CardProyect({ title, description, code, demo = "", firstImage, secondImage, thirdImage }) {
-    const images = [firstImage, secondImage, thirdImage];
+    const images = [
+
+        // TO LOCALHOST
+        // "http://localhost:5173/Curriculum-Vitae" + firstImage,
+        // "http://localhost:5173/Curriculum-Vitae" + secondImage,
+        // "http://localhost:5173/Curriculum-Vitae" + thirdImage,
+
+        // TO GITHUB PAGES
+        "https://martinsilvajose.github.io/Curriculum-Vitae" + firstImage,
+        "https://martinsilvajose.github.io/Curriculum-Vitae" + secondImage,
+        "https://martinsilvajose.github.io/Curriculum-Vitae" + thirdImage,
+    ];
     const [image, setImage] = useState(images[0]);
 
     useEffect(() => {

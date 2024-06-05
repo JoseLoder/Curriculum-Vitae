@@ -8,7 +8,11 @@ export function CardTechnology({ url, image, title, description }) {
                 <CardMedia
                     component="img"
                     height="140"
-                    image={image}
+                    // TO LOCALHOST
+                    // image={"http://localhost:5173/Curriculum-Vitae" + image}
+
+                    // TO GITHUB PAGES
+                    image={"https://martinsilvajose.github.io/Curriculum-Vitae" + image}
                     alt={"Image " + title + " logo"}
                 />
                 <CardContent>
