@@ -41,7 +41,7 @@ export function Proyects() {
                         secondImage='/elefante-azul_2.png'
                         thirdImage='/elefante-azul_3.png'
                         title="Elefante Azul - Laravel"
-                        description="Un proyecto realizado enteramente con Laravel, simula un sitio web donde poder pedir cita y que te imprima un ticket con la hora y datos relacionados. Además si eres administrador podrás ver todas las citas."
+                        description="Un proyecto realizado con Laravel, es un sitio web para pedir cita devolviendo un ticket con la hora y datos relacionados. Además si eres administrador podrás ver todas las citas."
                         code="https://github.com/MartinSilvaJose/Elefante-Azul.git"
 
                     />
@@ -67,7 +67,7 @@ export function Proyects() {
                         secondImage='/working-the-dom_2.png'
                         thirdImage='/working-the-dom_3.png'
                         title="Working the DOM - JS Vanilla"
-                        description="Un proyecto realizado con HTML, CSS y JavaScript,donde se pueden añadir, eliminar, modificar y eliminar datos. Cuando cliqueas en modificar puedes seleccionar las teclas de dirección del teclado para moverlo."
+                        description="Un proyecto realizado con HTML, CSS y JavaScript con funcionalidad CRUD utilizando el DOM. Cuando modificas puedes alterar la posición del registro con las flechas."
                         code="https://github.com/MartinSilvaJose/Working-The-DOM.git"
                         demo="https://martinsilvajose.github.io/Working-The-DOM/"
                     />
