@@ -52,23 +52,6 @@ export function LandingPage() {
                                         <TDS>Nombre:</TDS> José Miguel Martín Silva
                                     </Typography>
                                 </li>
-
-                                <li>
-                                    <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                        <TDS>Fecha de Nacimiento:</TDS> 21 de Abril de 1997
-                                    </Typography>
-                                </li>
-                                <li>
-                                    <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                        <TDS>Dirección:</TDS> Calle Hermanos Machado, Nº 5, 2º. Vícar,
-                                        Almería, Andalucía.
-                                    </Typography>
-                                </li>
-                                <li>
-                                    <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                        <TDS>Móvil:</TDS>  633 338 128
-                                    </Typography>
-                                </li>
                                 <li>
                                     <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
                                         <TDS>Email:</TDS> martin.silva.jmms@gmail.com
