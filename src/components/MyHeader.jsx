@@ -17,7 +17,7 @@ export function MyHeader() {
     return (
         <>
             <AppBar position="fixed">
-                <Container maxWidth="lg">
+
                     <Toolbar>
 
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: 'primary.main' }}>
@@ -103,7 +103,7 @@ export function MyHeader() {
                             </Button>
                         </Box>
                     </Toolbar>
-                </Container>
+
             </AppBar>
         </>
     );
