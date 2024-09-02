@@ -19,9 +19,9 @@ export function CardProyect({ title, description, code, demo = "", firstImage, s
         // "http://localhost:5173/Curriculum-Vitae" + thirdImage,
 
         // TO GITHUB PAGES
-        "https://martinsilvajose.github.io/Curriculum-Vitae" + firstImage,
-        "https://martinsilvajose.github.io/Curriculum-Vitae" + secondImage,
-        "https://martinsilvajose.github.io/Curriculum-Vitae" + thirdImage,
+        "https://joseloder.github.io/Curriculum-Vitae" + firstImage,
+        "https://joseloder.github.io/Curriculum-Vitae" + secondImage,
+        "https://joseloder.github.io/Curriculum-Vitae" + thirdImage,
     ];
     const [image, setImage] = useState(images[0]);
 
