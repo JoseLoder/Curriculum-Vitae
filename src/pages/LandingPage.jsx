@@ -59,12 +59,12 @@ export function LandingPage() {
                                 </li>
                                 <li>
                                     <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                        <TDS>Linkedln:</TDS> <CustomLink href="www.linkedin.com/in/martin-silva-jose">www.linkedin.com/in/martin-silva-jose</CustomLink>
+                                        <TDS>Linkedln:</TDS> <CustomLink href="www.linkedin.com/in/joseloder">www.linkedin.com/in/martin-silva-jose</CustomLink>
                                     </Typography>
                                 </li>
                                 <li>
                                     <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                        <TDS>Github:</TDS> <CustomLink href="https://github.com/MartinSilvaJose">MartinSilvaJose</CustomLink>
+                                        <TDS>Github:</TDS> <CustomLink href="https://github.com/joseloder">MartinSilvaJose</CustomLink>
                                     </Typography>
                                 </li>
                             </ul>
