@@ -2,6 +2,7 @@ import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/m
 import PropTypes from "prop-types";
 
 export function CardTechnology({ url, image, title, description }) {
+    image = "https://joseloder.github.io/Curriculum-Vitae" + image;
     return (
         <Card sx={{ maxWidth: 345 }}>
             <CardActionArea href={url}>
