@@ -13,7 +13,7 @@ export function CardTechnology({ url, image, title, description }) {
                     // image={"http://localhost:5173/Curriculum-Vitae" + image}
 
                     // TO GITHUB PAGES
-                    image={"https://martinsilvajose.github.io/Curriculum-Vitae" + image}
+                    image={image}
                     alt={"Image " + title + " logo"}
                 />
                 <CardContent>
