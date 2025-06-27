@@ -59,12 +59,17 @@ export function LandingPage() {
                                 </li>
                                 <li>
                                     <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                        <TDS>Linkedln:</TDS> <CustomLink href="www.linkedin.com/in/joseloder">www.linkedin.com/in/martin-silva-jose</CustomLink>
+                                        <TDS>Linkedln:</TDS> <CustomLink href="https://www.linkedin.com/in/joseloder">www.linkedin.com/in/joseloder</CustomLink>
+                                    </Typography>
+                                </li>
+                                                                <li>
+                                    <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
+                                        <TDS>European Union:</TDS> <CustomLink href="https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/jos%C3%A9+miguel-mart%C3%ADn+silva/e9f60dde-793a-49a6-9d18-5117a5365cb9?view=html">My personal Europass</CustomLink>
                                     </Typography>
                                 </li>
                                 <li>
                                     <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                        <TDS>Github:</TDS> <CustomLink href="https://github.com/joseloder">MartinSilvaJose</CustomLink>
+                                        <TDS>Github:</TDS> <CustomLink href="https://github.com/joseloder">JoseLoder</CustomLink>
                                     </Typography>
                                 </li>
                             </ul>
