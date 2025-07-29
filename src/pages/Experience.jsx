@@ -27,12 +27,75 @@ export function Experience() {
             <HGroup firstTitle="! ALLÁ VAMOS !" secondTitle="Mi Recorrido . . ." aditionalText="En el mundo Profesional y Académico" />
             <MyMain>
                 <SectionBox title="Experiencia Laboral Relacionada" >
+                    <AccordionFirstLevel icon={<WebIcon />} sector="DAW" skills="Desarrollo de Aplicaciones Web">
+                        <AccordionSecondLevel
+                            job="Desarrollador Web Full-Stack"
+                            time="Junio 2025 - Actualidad"
+                            ubication="Profesional independiente · En remoto · Málaga, Andalucía, España"
+                            functions="Arquitecto de software, líder del diseño arquitectónico y desarrollo de aplicaciones complejas para el frontend y backend."
+                            description={<>
+                                <p>Descripción detallada de las funciones realizadas:</p>
+                                <ul>
+                                    <li>Como arquitecto de software, lidero el diseño arquitectónico y desarrollo de aplicaciones complejas para el frontend y backend.</li>
+                                    <li>Diseño las APIs y creo los patrones y estándares de datos que utilizan los desarrolladores, apoyándome en un SDLC robusto.</li>
+                                    <li>Genero diagramas como casos de uso, entidad relación, modelo relacional, modelo de negocio, etc.</li>
+                                    <li>Me encargo de que los sistemas se implementen correctamente y sean escalables, seguros y de alto rendimiento.</li>
+                                    <li>Uso tecnologías como React, Node.js, Express.js, PostgreSQL y TypeScript.</li>
+                                    <li>Diseño soluciones con arquitectura orientada a microservicios y despliego en la nube.</li>
+                                    <li>Me centro en crear experiencias de usuario fluidas a través de interfaces responsive y diseño gráfico web.</li>
+                                    <li>Actualmente estoy creando soluciones que optimizan los recursos en las empresas manufactureras para su transformación al movimiento #Industria-4.0.</li>
+                                </ul>
+                            </>}
+                        />
+                        <AccordionSecondLevel
+                            job="Desarrollador de Front-End"
+                            time="Febrero 2025 - Junio 2025"
+                            ubication="Jaraxa Software, SL · Contrato de prácticas · Málaga, Andalucía, España · Híbrido"
+                            functions="Desarrollo front-end enfocado en la creación de interfaces de usuario intuitivas y funcionales para aplicaciones web."
+                            description={<>
+                                <p>Descripción detallada de las funciones realizadas:</p>
+                                <ul>
+                                    <li>Trabajo como desarrollador frontend enfocado en la creación de interfaces de usuario intuitivas y funcionales para aplicaciones web.</li>
+                                    <li>Me encargo del desarrollo front-end utilizando lenguajes como TypeScript y React para diseñar y programar componentes reutilizables.</li>
+                                    <li>Consumo la API REST del backend para integrar los datos de manera eficiente en las interfaces.</li>
+                                    <li>Colaboro estrechamente con el equipo de diseño para maquetar y prototipar las interfaces siguiendo los patrones y especificaciones de usabilidad.</li>
+                                    <li>Aplico mejores prácticas de desarrollo frontend para garantizar la mantenibilidad y escalabilidad del código.</li>
+                                    <li>Participo en la optimización de la experiencia de usuario (UX) y la interfaz de usuario (UI).</li>
+                                </ul>
+                            </>}
+                        />
+                        <AccordionSecondLevel
+                            job="Desarrollador Web"
+                            time="Marzo 2024 - Febrero 2025"
+                            ubication="Profesional independiente · En remoto · Málaga, Andalucía, España"
+                            functions="Desarrollo autodidacta con React y diseño de arquitectura para proyectos complejos."
+                            description={<>
+                                <p>Descripción detallada de las funciones realizadas:</p>
+                                <ul>
+                                    <li>He estado trabajando con React de manera autodidacta, profundizando en el desarrollo de aplicaciones web modernas.</li>
+                                    <li>He realizado multitud de proyectos durante este período, siendo este curriculum vitae uno de los ejemplos más destacados.</li>
+                                    <li>Me centré en el diseño y arquitectura de bases de datos para proyectos de gran envergadura.</li>
+                                    <li>Desarrollé la lógica de negocio del proyecto industrial que actualmente estoy implementando enfocado en la transformación #Industria-4.0.</li>
+                                    <li>Apliqué metodologías de desarrollo ágil y patrones de diseño para garantizar código escalable y mantenible.</li>
+                                    <li>Experimenté con diferentes tecnologías del ecosistema React para ampliar mis conocimientos técnicos.</li>
+                                </ul>
+                            </>}
+                        />
+                    </AccordionFirstLevel>
                     <AccordionFirstLevel icon={<ConnectedTvIcon />} sector="SMR" skills="Soldadura de Componentes, Configuración de Impresoras y Reparaciones, Leer Documentación Técnica, . . .">
                         <AccordionSecondLevel
                             job="Técnico SMR"
                             time="Octubre 2021 - Enero 2022"
                             ubication="Neotronics. Calle de la Sierra de Grazalema. Viator, Almería."
                             functions="Formación en centros de trabajo (FCT)"
+                            description={<>
+                                <p>Descripción detallada de las funciones realizadas:</p>
+                                <ul>
+                                    <li>Asistencia técnica en la configuración de dispositivos.</li>
+                                    <li>Reparación de componentes electrónicos.</li>
+                                    <li>Documentación de procesos y procedimientos.</li>
+                                </ul>
+                            </>}
                         />
                     </AccordionFirstLevel>
 

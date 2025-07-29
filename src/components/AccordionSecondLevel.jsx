@@ -13,7 +13,7 @@ import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import WorkIcon from '@mui/icons-material/Work';
 
-export function AccordionSecondLevel({ job, time, ubication, functions }) {
+export function AccordionSecondLevel({ job, time, ubication, functions, description }) {
     return (
 
         <Accordion>
@@ -47,6 +47,11 @@ export function AccordionSecondLevel({ job, time, ubication, functions }) {
                         </ListItemIcon>
                         <ListItemText primary={functions} />
                     </ListItem>
+                    {description && (
+                        <ListItem>
+                            <ListItemText primary={description} />
+                        </ListItem>
+                    )}
 
                 </List>
             </AccordionDetails>
@@ -59,5 +64,6 @@ AccordionSecondLevel.propTypes = {
     job: PropTypes.string.isRequired,
     time: PropTypes.string.isRequired,
     ubication: PropTypes.string.isRequired,
-    functions: PropTypes.string.isRequired
+    functions: PropTypes.string.isRequired,
+    description: PropTypes.string
 };
