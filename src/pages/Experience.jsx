@@ -13,40 +13,101 @@ import StoreIcon from '@mui/icons-material/Store';
 import CoPresentIcon from '@mui/icons-material/CoPresent';
 import ConnectedTvIcon from '@mui/icons-material/ConnectedTv';
 import WebIcon from '@mui/icons-material/Web';
-import LaunchIcon from '@mui/icons-material/Launch';
 
 import { Box, List, ListItem, ListItemText } from "@mui/material";
 import { CardTechnology } from "../components/CardTechnology";
 import { CustomLink } from "../components/CustomLink";
 
 
+// Ordenadas de más a menos relevante para mi perfil actual
+const technologies = [
+    { url: "https://developer.mozilla.org/es/docs/Web/JavaScript", image: "/javascript.png", title: "JavaScript", description: "Lenguaje principal con el que trabajo, tanto en el navegador como en el servidor" },
+    { url: "https://www.typescriptlang.org/", image: "/typescript.svg", title: "TypeScript", description: "JavaScript con tipado estático; lo uso para compartir contratos de datos entre API y frontend" },
+    { url: "https://nodejs.org/", image: "/nodejs.png", title: "Node.js", description: "Entorno de ejecución para JavaScript en el servidor" },
+    { url: "https://expressjs.com/", image: "/express.svg", title: "Express", description: "Framework minimalista de Node.js para construir APIs REST" },
+    { url: "https://react.dev/", image: "/react.png", title: "React", description: "Biblioteca de JavaScript para crear interfaces de usuario basadas en componentes" },
+    { url: "https://www.postgresql.org/", image: "/postgresql.svg", title: "PostgreSQL", description: "Base de datos relacional de código abierto" },
+    { url: "https://www.mysql.com/", image: "/mysql.png", title: "MySQL", description: "Sistema de gestión de bases de datos relacional" },
+    { url: "https://www.docker.com/", image: "/docker.svg", title: "Docker", description: "Contenedores para levantar base de datos, API y frontend con Docker Compose" },
+    { url: "https://reactrouter.com/", image: "/react-router.png", title: "React Router", description: "Biblioteca para gestionar las rutas de una aplicación React" },
+    { url: "https://redux.js.org/", image: "/redux.png", title: "Redux", description: "Biblioteca para gestionar el estado global de la aplicación" },
+    { url: "https://git-scm.com/", image: "/git.png", title: "Git", description: "Sistema de control de versiones distribuido" },
+    { url: "https://github.com/", image: "/github.png", title: "GitHub", description: "Plataforma para alojar repositorios, revisar código y automatizar despliegues" },
+    { url: "https://www.linux.org/", image: "/linux.png", title: "Linux", description: "Sistema operativo de código abierto, estándar en servidores" },
+    { url: "https://developer.mozilla.org/es/docs/Web/HTML", image: "/html-5.png", title: "HTML 5", description: "Lenguaje para estructurar el contenido de una página web" },
+    { url: "https://developer.mozilla.org/es/docs/Web/CSS", image: "/css-3.png", title: "CSS 3", description: "Lenguaje para dar estilo y maquetar una página web" },
+    { url: "https://getbootstrap.com/", image: "/bootstrap.png", title: "Bootstrap", description: "Framework CSS para maquetación responsive" },
+    { url: "https://www.json.org/json-es.html", image: "/json.png", title: "JSON", description: "Formato ligero de intercambio de datos entre cliente y servidor" },
+    { url: "https://www.php.net/", image: "/php.png", title: "PHP", description: "Lenguaje de servidor orientado al desarrollo web" },
+    { url: "https://laravel.com/", image: "/laravel.png", title: "Laravel", description: "Framework de PHP para el desarrollo de aplicaciones web" },
+    { url: "https://www.java.com/es/", image: "/java.png", title: "Java", description: "Lenguaje de propósito general orientado a objetos" },
+    { url: "https://openjfx.io/", image: "/javafx.png", title: "JavaFX", description: "Biblioteca de Java para crear aplicaciones de escritorio con interfaz gráfica" },
+];
+
 export function Experience() {
     return (
         <>
             <MyHeader />
-            <HGroup firstTitle="! ALLÁ VAMOS !" secondTitle="Mi Recorrido . . ." aditionalText="En el mundo Profesional y Académico" />
+            <HGroup firstTitle="Experiencia" secondTitle="Mi recorrido" aditionalText="profesional y académico." />
             <MyMain>
                 <SectionBox title="Experiencia Laboral Relacionada" >
                     <AccordionFirstLevel icon={<WebIcon />} sector="DAW" skills="Desarrollo de Aplicaciones Web">
-                        <AccordionSecondLevel
-                            job="Desarrollador Web Full-Stack"
-                            time="Junio 2025 - Actualidad"
-                            ubication="Profesional independiente · En remoto · Málaga, Andalucía, España"
-                            functions="Arquitecto de software, líder del diseño arquitectónico y desarrollo de aplicaciones complejas para el frontend y backend."
-                            description={<>
-                                <p>Descripción detallada de las funciones realizadas:</p>
-                                <ul>
-                                    <li>Como arquitecto de software, lidero el diseño arquitectónico y desarrollo de aplicaciones complejas para el frontend y backend.</li>
-                                    <li>Diseño las APIs y creo los patrones y estándares de datos que utilizan los desarrolladores, apoyándome en un SDLC robusto.</li>
-                                    <li>Genero diagramas como casos de uso, entidad relación, modelo relacional, modelo de negocio, etc.</li>
-                                    <li>Me encargo de que los sistemas se implementen correctamente y sean escalables, seguros y de alto rendimiento.</li>
-                                    <li>Uso tecnologías como React, Node.js, Express.js, PostgreSQL y TypeScript.</li>
-                                    <li>Diseño soluciones con arquitectura orientada a microservicios y despliego en la nube.</li>
-                                    <li>Me centro en crear experiencias de usuario fluidas a través de interfaces responsive y diseño gráfico web.</li>
-                                    <li>Actualmente estoy creando soluciones que optimizan los recursos en las empresas manufactureras para su transformación al movimiento #Industria-4.0.</li>
-                                </ul>
-                            </>}
-                        />
+<AccordionSecondLevel
+    job="Desarrollador Web Full-Stack · Proyecto de Fin de Grado"
+    time="Febrero 2025 - Julio 2025"
+    ubication="Proyecto personal · En remoto · Málaga, Andalucía, España"
+    functions="Diseño y desarrollo completo de Pawn-to-Pawn, una aplicación de gestión de pedidos y producción (máquinas, materiales y productos) con acceso por roles."
+    description={<>
+        <p>Descripción detallada de las funciones realizadas:</p>
+        <ul>
+            <li>
+                <strong>Arquitectura monorepo en TypeScript:</strong> separé backend, frontend y un paquete
+                de <strong>tipos compartidos</strong> (<code>@pawn-to-pawn/shared</code>) con npm workspaces, de modo
+                que la API y la interfaz usan los mismos contratos de datos y los errores se detectan al compilar.
+            </li>
+            <li>
+                <strong>API REST con Node.js y Express:</strong> arquitectura en capas (rutas → controladores → modelos)
+                para 5 entidades, validación de cada petición con <strong>Zod</strong> y gestión centralizada de errores
+                con clases propias.
+            </li>
+            <li>
+                <strong>Autenticación y seguridad:</strong> login con <strong>JWT en cookies HTTP-only</strong>,
+                refresh tokens guardados en base de datos con renovación automática de sesión, contraseñas cifradas
+                con bcrypt y middlewares de autorización para <strong>3 roles</strong> (cliente, operario, administrador).
+            </li>
+            <li>
+                <strong>Base de datos PostgreSQL:</strong> diseño del modelo entidad-relación y relacional, consultas
+                parametrizadas con <code>pg</code> y connection pooling sobre Supabase.
+            </li>
+            <li>
+                <strong>Frontend con React 19:</strong> enrutado dinámico según el rol del usuario con React Router,
+                rutas protegidas, gestión del estado del servidor y caché con <strong>TanStack Query</strong> y
+                componentes reutilizables (tablas, formularios) con styled-components y Radix UI.
+            </li>
+            <li>
+                <strong>Flujo de negocio completo:</strong> los clientes crean pedidos, los operarios los asignan y
+                los pasan por <em>pendiente → preparación → completado</em> y el administrador gestiona usuarios,
+                máquinas, materiales y productos.
+            </li>
+            <li>
+                <strong>DevOps:</strong> dockericé el proyecto con <strong>Docker Compose</strong> (PostgreSQL, API y
+                frontend), automaticé las tareas con un <strong>Makefile</strong> (setup, logs, backups y restauración
+                de la base de datos) y desplegué en <strong>Vercel</strong>.
+            </li>
+            <li>
+                <strong>Análisis y documentación:</strong> diagramas de casos de uso, entidad-relación y modelo de
+                negocio, y documentación técnica del proyecto.
+            </li>
+        </ul>
+        <p>
+            <strong>Stack:</strong> TypeScript · React · Express · PostgreSQL · Zod · JWT · TanStack Query · styled-components · Docker
+        </p>
+        <p>
+            <CustomLink href="https://github.com/JoseLoder/Pawn-to-Pawn" target="_blank" rel="noreferrer">Ver código en GitHub →</CustomLink>
+        </p>
+    </>}
+/>
+
                         <AccordionSecondLevel
                             job="Desarrollador de Front-End"
                             time="Febrero 2025 - Junio 2025"
@@ -67,15 +128,15 @@ export function Experience() {
                         <AccordionSecondLevel
                             job="Desarrollador Web"
                             time="Marzo 2024 - Febrero 2025"
-                            ubication="Profesional independiente · En remoto · Málaga, Andalucía, España"
-                            functions="Desarrollo autodidacta con React y diseño de arquitectura para proyectos complejos."
+                            ubication="Desarrollos personales · En remoto · Málaga, Andalucía, España"
+                            functions="Desarrollo autodidacta con React y el planteamiento de mi proyecto final."
                             description={<>
                                 <p>Descripción detallada de las funciones realizadas:</p>
                                 <ul>
                                     <li>He estado trabajando con React de manera autodidacta, profundizando en el desarrollo de aplicaciones web modernas.</li>
                                     <li>He realizado multitud de proyectos durante este período, siendo este curriculum vitae uno de los ejemplos más destacados.</li>
-                                    <li>Me centré en el diseño y arquitectura de bases de datos para proyectos de gran envergadura.</li>
-                                    <li>Desarrollé la lógica de negocio del proyecto industrial que actualmente estoy implementando enfocado en la transformación #Industria-4.0.</li>
+                                    <li>Me centré en el diseño y arquitectura de bases de datos para mi proyecto final.</li>
+                                    <li>Desarrollé la lógica de negocio del proyecto industrial enfocado en la transformación #Industria-4.0 de mi proyecto final.</li>
                                     <li>Apliqué metodologías de desarrollo ágil y patrones de diseño para garantizar código escalable y mantenible.</li>
                                     <li>Experimenté con diferentes tecnologías del ecosistema React para ampliar mis conocimientos técnicos.</li>
                                 </ul>
@@ -148,7 +209,7 @@ export function Experience() {
                             functions="Encargado del Office y pinche del pasillo frío."
                         />
                     </AccordionFirstLevel>
-                    <AccordionFirstLevel icon={<FactoryIcon />} sector="Industria" skills="Responsabilidad en la Seguridad, Apoyo con el Equipo, Control de la Fátiga, Trabajo Sistemático y Metódico, . . . ">
+                    <AccordionFirstLevel icon={<FactoryIcon />} sector="Industria" skills="Responsabilidad en la Seguridad, Apoyo con el Equipo, Control de la Fatiga, Trabajo Sistemático y Metódico, . . . ">
                         <AccordionSecondLevel
                             job="Mozo de almacén"
                             time="Noviembre 2023 - Marzo 2024"
@@ -159,10 +220,10 @@ export function Experience() {
                             job="Operario industrial"
                             time="Julio 2023 - Octubre 2023"
                             ubication="Sotrafa, Grupo Armando Álvarez. Carretera Nacional 340, El Ejido, Almería."
-                            functions="Preparación de pedidos de bovinas de plástico agrícola."
+                            functions="Preparación de pedidos de bobinas de plástico agrícola."
                         />
                     </AccordionFirstLevel>
-                    <AccordionFirstLevel icon={<StoreIcon />} sector="Reponedor" skills="Atención al Cliente, Resolución de Problemas, División de tareas, Gestión del tiempo, Control de Cálidad, Control de Stock,  . . .">
+                    <AccordionFirstLevel icon={<StoreIcon />} sector="Reponedor" skills="Atención al Cliente, Resolución de Problemas, División de tareas, Gestión del tiempo, Control de Calidad, Control de Stock,  . . .">
                         <AccordionSecondLevel
                             job="Frutero"
                             time="Mayo 2022 - Noviembre 2022"
@@ -178,7 +239,7 @@ export function Experience() {
                     </AccordionFirstLevel>
                 </SectionBox>
 
-                <SectionBox title="Formación Académica, Cursos y Otras Acreditaciones" >
+                <SectionBox title="Formación Académica y Cursos" >
                     <AccordionFirstLevel icon={<WebIcon />} sector="DAW" skills="Desarrollo de Aplicaciones Web">
                         <List sx={{ padding: 0 }}>
                             <ListItem>
@@ -268,7 +329,7 @@ export function Experience() {
                                 <ListItemText
                                     primary={
                                         <CustomLink href="https://openwebinars.net/cert/ODP92">
-                                            {"Transformaciones, Transitiones y Animaciones con CSS 3"}
+                                            {"Transformaciones, Transiciones y Animaciones con CSS 3"}
                                         </CustomLink>
                                     }
                                 />
@@ -296,7 +357,7 @@ export function Experience() {
                                 <ListItemText
                                     primary={
                                         <CustomLink href="https://openwebinars.net/cert/wQw2O">
-                                            {"Bootstrap 4: Maquetación Resposive y Layout"}
+                                            {"Bootstrap 4: Maquetación Responsive y Layout"}
                                         </CustomLink>
                                     }
                                 />
@@ -312,25 +373,6 @@ export function Experience() {
                             </ListItem>
                         </List>
                     </AccordionFirstLevel>
-                    <AccordionFirstLevel icon={<LaunchIcon />} sector="Otros Cursos">
-                        <List sx={{ padding: 0 }}>
-                            <ListItem>
-                                <ListItemText primary="Titulación de Socorrista" />
-                            </ListItem>
-                            <ListItem>
-                                <ListItemText primary="Titulación de Primeros Auxilios" />
-                            </ListItem>
-                            <ListItem>
-                                <ListItemText primary="Titulación de Reconocimiento, Uso y Manejo del Equipo de Oxigenoterapia" />
-                            </ListItem>
-                            <ListItem>
-                                <ListItemText primary="Titulación de Manipulador de Alimentos" />
-                            </ListItem>
-                            <ListItem>
-                                <ListItemText primary="Certificado de Homologación en Operador de Carretillas de Manutención de hasta 10.000 KG" />
-                            </ListItem>
-                        </List>
-                    </AccordionFirstLevel>
                 </SectionBox>
                 <SectionBox title="Tecnologías" >
                     <Box
@@ -343,120 +385,9 @@ export function Experience() {
                             gap: 5
                         }}
                     >
-                        <CardTechnology
-                            url="https://reactjs.org/"
-                            image="/react.png"
-                            title="React"
-                            description="Es una biblioteca de JavaScript para crear interfaces de usuario"
-                        />
-                        <CardTechnology
-                            url="https://laravel.com/"
-                            image="/laravel.png"
-                            title="Laravel"
-                            description="Es un framework de código abierto de PHP para el desarrollo de aplicaciones web"
-                        />
-                        <CardTechnology
-                            url="https://www.java.com/es/"
-                            image="/java.png"
-                            title="Java"
-                            description="Es un lenguaje de programación de propósito general que se adapta especialmente a la programación orientada a objetos"
-                        />
-                        <CardTechnology
-                            url="https://www.javascript.com/"
-                            image="/javascript.png"
-                            title="JavaScript"
-                            description="Es un lenguaje de programación que se utiliza para crear contenido interactivo en páginas web"
-                        />
-                        <CardTechnology
-                            url="https://www.php.net/"
-                            image="/php.png"
-                            title="PHP"
-                            description="Es un lenguaje de programación de uso general que se adapta especialmente al desarrollo web"
-                        />
-                        <CardTechnology
-                            url="https://developer.mozilla.org/en-US/docs/Web/HTML"
-                            image="/html-5.png"
-                            title="HTML 5"
-                            description="Es el código que se utiliza para estructurar y desplegar una página web y sus contenidos"
-                        />
-                        <CardTechnology
-                            url="https://developer.mozilla.org/en-US/docs/Web/CSS"
-                            image="/css-3.png"
-                            title="CSS 3"
-                            description="Es el código que se utiliza para dar estilo a una página web y sus contenidos"
-                        />
-                        <CardTechnology
-                            url="https://openjfx.io/"
-                            image="/javafx.png"
-                            title="JavaFX"
-                            description="Es una biblioteca de software de gráficos y multimedia que permite a los desarrolladores de Java crear aplicaciones de escritorio con una interfaz gráfica de usuario rica y moderna"
-                        />
-                        <CardTechnology
-                            url="https://www.json.org/json-en.html"
-                            image="/json.png"
-                            title="Json"
-                            description="Es un formato ligero de intercambio de datos entre un servidor y un cliente o entre dos servidores"
-                        />
-                        <CardTechnology
-                            url="https://www.mysql.com/"
-                            image="/mysql.png"
-                            title="MySQL"
-                            description="Es un sistema de gestión de bases de datos relacional, este sistema se utiliza para almacenar y gestionar los datos de un sitio web o aplicación"
-                        />
-                        <CardTechnology
-                            url="https://nodejs.org/"
-                            image="/nodejs.png"
-                            title="Node.js"
-                            description="Es un entorno de ejecución para JavaScript que permite ejecutar código JavaScript en el servidor"
-                        />
-                        <CardTechnology
-                            url="https://redux.js.org/"
-                            image="/redux.png"
-                            title="React Redux"
-                            description="Es una biblioteca de JavaScript para manejar el estado de la aplicación"
-                        />
-                        <CardTechnology
-                            url="https://reactrouter.com/"
-                            image="/react-router.png"
-                            title="React Route"
-                            description="Es una biblioteca de JavaScript para manejar las rutas de la aplicación"
-                        />
-                        <CardTechnology
-                            url="https://getbootstrap.com/"
-                            image="/bootstrap.png"
-                            title="Bootstrap 4"
-                            description="Es un framework de código abierto para el desarrollo de aplicaciones web"
-                        />
-                        <CardTechnology
-                            url="https://git-scm.com/"
-                            image="/git.png"
-                            title="Git"
-                            description="Es un sistema de control de versiones distribuido"
-                        />
-                        <CardTechnology
-                            url="https://github.com/"
-                            image="/github.png"
-                            title="GitHub"
-                            description="Es una plataforma de desarrollo colaborativo de software para alojar proyectos utilizando el sistema de control de versiones Git"
-                        />
-                        <CardTechnology
-                            url="https://code.visualstudio.com/"
-                            image="/visual-studio-code.png"
-                            title="Visual Studio Code"
-                            description="Es un editor de código fuente desarrollado por Microsoft para Windows, Linux y macOS"
-                        />
-                        <CardTechnology
-                            url="https://www.linux.org/"
-                            image="/linux.png"
-                            title="Linux"
-                            description="Es un sistema operativo de código abierto, basado en Unix, que se utiliza en servidores y dispositivos embebidos gracias a su estabilidad y seguridad"
-                        />
-                        <CardTechnology
-                            url="https://www.microsoft.com/es-es/windows/"
-                            image="/windows.png"
-                            title="Windows"
-                            description="Es un sistema operativo de Microsoft, el más utilizado en el mundo gracias a su facilidad de uso y compatibilidad con la mayoría de los programas"
-                        />
+                        {technologies.map((tech) => (
+                            <CardTechnology key={tech.title} {...tech} />
+                        ))}
                     </Box>
                 </SectionBox>
             </MyMain >

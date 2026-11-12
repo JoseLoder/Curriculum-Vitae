@@ -35,7 +35,7 @@ export function MyHeader() {
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: 'secondary.main' }}>
                         J.M.M.S
                     </Typography>
-                    <Box sx={{ felxgrow: 1, display: { xs: 'none', sm: 'flex' } }}>
+                    <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
                         <Button
                             color="inherit"
                             component={Link}
@@ -48,8 +48,8 @@ export function MyHeader() {
                         <Button
                             color="inherit"
                             component={Link}
-                            to="/proyects"
-                            sx={getButtonStyles("/proyects")}
+                            to="/projects"
+                            sx={getButtonStyles("/projects")}
                         >
                             <Box mr={1}><TerminalIcon /></Box>
                             Proyectos
@@ -65,7 +65,7 @@ export function MyHeader() {
                         </Button>
                     </Box>
                     <ThemeToggleButton />
-                    <Box sx={{ felxgrow: 1, display: { xs: 'flex', sm: 'none' } }}>
+                    <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
                         <Button
                             color="inherit"
                             component={Link}
@@ -77,8 +77,8 @@ export function MyHeader() {
                         <Button
                             color="inherit"
                             component={Link}
-                            to="/proyects"
-                            sx={getButtonStyles("/proyects")}
+                            to="/projects"
+                            sx={getButtonStyles("/projects")}
                         >
                             <TerminalIcon />
                         </Button>

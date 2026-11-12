@@ -2,9 +2,10 @@ import PropTypes from 'prop-types';
 import { Link } from '@mui/material';
 
 
-export function CustomLink({ href, children }) {
+export function CustomLink({ href, children, ...props }) {
     return (
         <Link href={href}
+            {...props}
             sx={{
                 textDecoration: 'none',
                 '&:hover': {
@@ -22,4 +23,6 @@ export function CustomLink({ href, children }) {
 CustomLink.propTypes = {
     href: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired,
+    target: PropTypes.string,
+    rel: PropTypes.string,
 }

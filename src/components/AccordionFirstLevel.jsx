@@ -8,17 +8,19 @@ import {
     ListItemText
 } from "@mui/material";
 import PropTypes from "prop-types";
+import { useId } from "react";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { TDS } from "./TDS";
 
 
 export function AccordionFirstLevel({ icon, sector, skills, children }) {
+    const id = useId();
     return (
         <Accordion sx={{ alignSelf: 'center', width: '80%', backgroundColor: 'divider' }}>
             <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1-content"
-                id="panel1-header"
+                aria-controls={`${id}-content`}
+                id={`${id}-header`}
             >
                 <ListItem sx={{ padding: 0 }}>
                     <ListItemAvatar >
@@ -38,6 +40,6 @@ export function AccordionFirstLevel({ icon, sector, skills, children }) {
 AccordionFirstLevel.propTypes = {
     icon: PropTypes.element.isRequired,
     sector: PropTypes.string.isRequired,
-    skills: PropTypes.string.isRequired,
+    skills: PropTypes.string,
     children: PropTypes.node,
 }

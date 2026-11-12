@@ -9,31 +9,19 @@ import {
 
 import { PropTypes } from "prop-types";
 import { useEffect, useState } from "react";
+import { assetUrl } from "../utils/assetUrl";
 
-export function CardProyect({ title, description, code, demo = "", firstImage, secondImage, thirdImage }) {
-    const images = [
-
-        // TO LOCALHOST
-        // "http://localhost:5173/Curriculum-Vitae" + firstImage,
-        // "http://localhost:5173/Curriculum-Vitae" + secondImage,
-        // "http://localhost:5173/Curriculum-Vitae" + thirdImage,
-
-        // TO GITHUB PAGES
-        "https://joseloder.github.io/Curriculum-Vitae" + firstImage,
-        "https://joseloder.github.io/Curriculum-Vitae" + secondImage,
-        "https://joseloder.github.io/Curriculum-Vitae" + thirdImage,
-    ];
-    const [image, setImage] = useState(images[0]);
+export function CardProject({ title, description, code, demo = "", firstImage, secondImage, thirdImage }) {
+    const images = [firstImage, secondImage, thirdImage].filter(Boolean).map(assetUrl);
+    const [index, setIndex] = useState(0);
 
     useEffect(() => {
-        let i = 0;
+        if (images.length < 2) return;
         const interval = setInterval(() => {
-            i = (i + 1) % images.length;
-            setImage(images[i]);
+            setIndex((i) => (i + 1) % images.length);
         }, 5000);
-        return () => clearInterval(interval)
-    }, []);
-
+        return () => clearInterval(interval);
+    }, [images.length]);
 
     return (
         <Card sx={{ width: 250 }}>
@@ -41,8 +29,8 @@ export function CardProyect({ title, description, code, demo = "", firstImage, s
             <CardMedia
                 component="img"
                 height="140"
-                image={image}
-                alt={'Image ' + title + ' Proyect'}
+                image={images[index]}
+                alt={'Captura del proyecto ' + title}
             />
             <CardContent sx={{ height: 200 }}>
                 <Typography gutterBottom variant="h5" component="div">
@@ -54,10 +42,10 @@ export function CardProyect({ title, description, code, demo = "", firstImage, s
             </CardContent>
 
             <CardActions>
-                <Button size="small" color="primary" href={code}>
-                    Code
+                <Button size="small" color="primary" href={code} target="_blank" rel="noreferrer">
+                    Código
                 </Button>
-                <Button size="small" color="secondary" href={demo} disabled={!demo}>
+                <Button size="small" color="secondary" href={demo} target="_blank" rel="noreferrer" disabled={!demo}>
                     Demo
                 </Button>
             </CardActions>
@@ -65,7 +53,7 @@ export function CardProyect({ title, description, code, demo = "", firstImage, s
     )
 }
 
-CardProyect.propTypes = {
+CardProject.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     code: PropTypes.string.isRequired,

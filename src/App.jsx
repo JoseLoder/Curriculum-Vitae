@@ -1,9 +1,9 @@
 import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import { useState } from "react";
-import { createHashRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, Navigate, RouterProvider } from "react-router-dom";
 import { LandingPage } from "./pages/LandingPage";
 import ErrorPage from "./ErrorPage";
-import { Proyects } from "./pages/Proyects";
+import { Projects } from "./pages/Projects";
 import { Experience } from "./pages/Experience";
 import { ThemeContext } from "./contexts/ThemeContext";
 
@@ -33,9 +33,14 @@ export const App = () => {
       errorElement: <ErrorPage />,
     },
     {
-      path: "/proyects",
-      element: <Proyects />,
+      path: "/projects",
+      element: <Projects />,
       errorElement: <ErrorPage />,
+    },
+    {
+      // Ruta antigua: se mantiene para no romper enlaces ya compartidos
+      path: "/proyects",
+      element: <Navigate to="/projects" replace />,
     },
     {
       path: "/experience",

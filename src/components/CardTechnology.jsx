@@ -1,20 +1,17 @@
 import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
 import PropTypes from "prop-types";
+import { assetUrl } from "../utils/assetUrl";
 
 export function CardTechnology({ url, image, title, description }) {
-    image = "https://joseloder.github.io/Curriculum-Vitae" + image;
     return (
         <Card sx={{ maxWidth: 345 }}>
-            <CardActionArea href={url}>
+            <CardActionArea href={url} target="_blank" rel="noreferrer">
                 <CardMedia
                     component="img"
                     height="140"
-                    // TO LOCALHOST
-                    // image={"http://localhost:5173/Curriculum-Vitae" + image}
-
-                    // TO GITHUB PAGES
-                    image={image}
-                    alt={"Image " + title + " logo"}
+                    image={assetUrl(image)}
+                    alt={"Logo de " + title}
+                    sx={{ objectFit: 'contain', p: 2 }}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">

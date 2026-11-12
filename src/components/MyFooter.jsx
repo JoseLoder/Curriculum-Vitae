@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 
 
 export function MyFooter() {
@@ -14,13 +14,12 @@ export function MyFooter() {
             gap: 2,
         }} component="footer">
             <Typography align="center" color="textSecondary" component="p">
-                <strong> Jose Miguel Martín Silva </strong> <br />
+                <strong> José Miguel Martín Silva </strong> <br />
                 <strong> Full Stack Developer </strong> <br />
-                <strong> Phone: </strong> +34 633 338 128 <br />
-                <strong> Email: </strong> martin.silva.jmms@gmail.com
+                <strong> Email: </strong> <Link href="mailto:martin.silva.jmms@gmail.com" color="inherit">martin.silva.jmms@gmail.com</Link>
             </Typography>
             <Typography align="center" color="textSecondary" component="p">
-                <strong> © 2024 created with: </strong><br />
+                <strong> © {new Date().getFullYear()} · Hecho con: </strong><br />
                 JavaScript <br />
                 React <br />
                 Material-UI

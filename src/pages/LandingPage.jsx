@@ -7,23 +7,24 @@ import { Box, ImageListItem, ImageListItemBar, Typography } from "@mui/material"
 import { HGroup } from "../components/HGroup";
 import { SectionBox } from "../components/SectionBox";
 import { CustomLink } from "../components/CustomLink";
+import { assetUrl } from "../utils/assetUrl";
 
 export function LandingPage() {
     return (
         <>
             <MyHeader />
             <MyMain>
-                <HGroup firstTitle="¡HOLA, QUÉ HAY!" secondTitle="Bienvenidos a mi Portafolio," aditionalText="aquí podrás encontrar información sobre mí y mis proyectos." />
+                <HGroup firstTitle="¡HOLA, QUÉ HAY!" secondTitle="Soy José Miguel," aditionalText="desarrollador Full-Stack con JavaScript y TypeScript." />
 
                 <SectionBox title="Presentación">
                     <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                        Me llamo <TDS>José Miguel</TDS> y estoy en la recta final de mi aprendizaje como <TDS>Full Stack Developer</TDS>. No obstante ya me siento preparado en todos los aspectos para formar parte de una gran empresa como es la vuestra.
+                        Me llamo <TDS>José Miguel</TDS> y soy <TDS>desarrollador web Full-Stack</TDS>, titulado en Desarrollo de Aplicaciones Web (DAW). Trabajo con <TDS>JavaScript y TypeScript</TDS>: <TDS>Node.js y Express</TDS> en el backend y <TDS>React</TDS> en el frontend.
                     </Typography>
                     <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                        <TDS>Mi historia</TDS> en lo referido al mundo del desarrollo web es curioso ya que <TDS>tenía especial interés por el Front-End</TDS>. Pero una vez terminé de entender y <TDS>posteriormente</TDS> tras realizar mi primer proyecto con <TDS>Laravel me resultó muy emocionante</TDS>.  Por lo que, he llegado a la  <TDS>conclusión</TDS> de que el <TDS>desarrollo web es mi sitio</TDS> y que me apasionan todos sus apectos.
+                        Hice las prácticas en <TDS>Jaraxa Software</TDS> como desarrollador frontend con React y TypeScript. Como proyecto de fin de grado desarrollé <CustomLink href="https://github.com/JoseLoder/Pawn-to-Pawn" target="_blank" rel="noreferrer">Pawn-to-Pawn</CustomLink>, una aplicación de gestión de pedidos y producción con una API REST en Express, PostgreSQL, autenticación con JWT y Docker.
                     </Typography>
                     <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                        <TDS>Es por eso que soy Desarrollador Web Full-Stack.</TDS>
+                        Empecé interesado por el front-end, pero lo que más me motiva es el <TDS>backend</TDS>: diseñar APIs, modelar bases de datos y resolver la lógica de negocio. Busco mi primera oportunidad como <TDS>desarrollador backend con Node.js o Full-Stack con JavaScript</TDS>.
                     </Typography>
                 </SectionBox>
 
@@ -32,8 +33,8 @@ export function LandingPage() {
 
                     <ImageListItem sx={{ width: { xs: 250, md: 500 }, marginLeft: { xs: 0, md: 10 }, marginBottom: 10, alignSelf: 'center' }}>
                         <img
-                            srcSet={`foto-personal-250.png 500w, foto-personal-500.png 1000w`}
-                            src="foto-personal-250.png"
+                            srcSet={`${assetUrl("foto-personal-250.png")} 500w, ${assetUrl("foto-personal-500.png")} 1000w`}
+                            src={assetUrl("foto-personal-250.png")}
                             alt='José Miguel Martín Silva'
                             loading="lazy"
                         />
@@ -54,22 +55,22 @@ export function LandingPage() {
                                 </li>
                                 <li>
                                     <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                        <TDS>Email:</TDS> martin.silva.jmms@gmail.com
+                                        <TDS>Email:</TDS> <CustomLink href="mailto:martin.silva.jmms@gmail.com">martin.silva.jmms@gmail.com</CustomLink>
                                     </Typography>
                                 </li>
                                 <li>
                                     <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                        <TDS>Linkedln:</TDS> <CustomLink href="https://www.linkedin.com/in/joseloder">www.linkedin.com/in/joseloder</CustomLink>
-                                    </Typography>
-                                </li>
-                                                                <li>
-                                    <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                        <TDS>European Union:</TDS> <CustomLink href="https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/jos%C3%A9+miguel-mart%C3%ADn+silva/e9f60dde-793a-49a6-9d18-5117a5365cb9?view=html">My personal Europass</CustomLink>
+                                        <TDS>LinkedIn:</TDS> <CustomLink href="https://www.linkedin.com/in/joseloder" target="_blank" rel="noreferrer">www.linkedin.com/in/joseloder</CustomLink>
                                     </Typography>
                                 </li>
                                 <li>
                                     <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                                        <TDS>Github:</TDS> <CustomLink href="https://github.com/joseloder">JoseLoder</CustomLink>
+                                        <TDS>Europass:</TDS> <CustomLink href="https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/jos%C3%A9+miguel-mart%C3%ADn+silva/e9f60dde-793a-49a6-9d18-5117a5365cb9?view=html" target="_blank" rel="noreferrer">Mi perfil Europass</CustomLink>
+                                    </Typography>
+                                </li>
+                                <li>
+                                    <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
+                                        <TDS>Github:</TDS> <CustomLink href="https://github.com/joseloder" target="_blank" rel="noreferrer">JoseLoder</CustomLink>
                                     </Typography>
                                 </li>
                             </ul>
