@@ -26,31 +26,31 @@ export function AccordionSecondLevel({ job, time, ubication, functions, descript
             >
                 {job}
             </AccordionSummary>
-            <AccordionDetails>
+            <AccordionDetails sx={{ px: { xs: 1, sm: 2 } }}>
                 <List sx={{ padding: 0 }}>
 
-                    <ListItem>
-                        <ListItemIcon>
+                    <ListItem sx={{ px: { xs: 0, sm: 2 } }}>
+                        <ListItemIcon sx={{ minWidth: { xs: 36, sm: 56 } }}>
                             <AccessTimeFilledIcon />
                         </ListItemIcon>
                         <ListItemText primary={time} />
                     </ListItem>
 
-                    <ListItem>
-                        <ListItemIcon>
+                    <ListItem sx={{ px: { xs: 0, sm: 2 } }}>
+                        <ListItemIcon sx={{ minWidth: { xs: 36, sm: 56 } }}>
                             <LocationOnIcon />
                         </ListItemIcon>
                         <ListItemText primary={ubication} />
                     </ListItem>
 
-                    <ListItem>
-                        <ListItemIcon>
+                    <ListItem sx={{ px: { xs: 0, sm: 2 } }}>
+                        <ListItemIcon sx={{ minWidth: { xs: 36, sm: 56 } }}>
                             <WorkIcon />
                         </ListItemIcon>
                         <ListItemText primary={functions} />
                     </ListItem>
                     {description && (
-                        <ListItem>
+                        <ListItem sx={{ px: { xs: 0, sm: 2 } }}>
                             <ListItemText primary={description} />
                         </ListItem>
                     )}

@@ -16,14 +16,14 @@ import { TDS } from "./TDS";
 export function AccordionFirstLevel({ icon, sector, skills, children }) {
     const id = useId();
     return (
-        <Accordion sx={{ alignSelf: 'center', width: '80%', backgroundColor: 'divider' }}>
+        <Accordion sx={{ alignSelf: 'center', width: {xs: '100%', md: '80%'}, backgroundColor: 'divider' }}>
             <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls={`${id}-content`}
                 id={`${id}-header`}
             >
-                <ListItem sx={{ padding: 0 }}>
-                    <ListItemAvatar >
+                <ListItem sx={{ px: { xs: 0, sm: 2 } }}>
+                    <ListItemAvatar sx={{ minWidth: { xs: 48, sm: 56 } }}>
                         <Avatar sx={{ backgroundColor: 'primary.main' }}>
                             {icon}
                         </Avatar>
@@ -31,7 +31,7 @@ export function AccordionFirstLevel({ icon, sector, skills, children }) {
                     <ListItemText primary={<TDS>{sector}</TDS>} secondary={skills} />
                 </ListItem>
             </AccordionSummary>
-            <AccordionDetails>
+            <AccordionDetails sx={{ px: { xs: 1, sm: 2 } }}>
                 {children}
             </AccordionDetails>
         </Accordion>
