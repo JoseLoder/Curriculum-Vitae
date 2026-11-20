@@ -14,7 +14,7 @@ export function MyFooter() {
             gap: 2,
         }} component="footer">
             <Typography align="center" color="textSecondary" component="p">
-                <strong> José Miguel Martín Silva </strong> <br />
+                <strong> José Martín</strong> <br />
                 <strong> Full Stack Developer </strong> <br />
                 <strong> Email: </strong> <Link href="mailto:martin.silva.jmms@gmail.com" color="inherit">martin.silva.jmms@gmail.com</Link>
             </Typography>

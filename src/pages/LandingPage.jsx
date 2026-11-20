@@ -14,11 +14,11 @@ export function LandingPage() {
         <>
             <MyHeader />
             <MyMain>
-                <HGroup firstTitle="¡HOLA, QUÉ HAY!" secondTitle="Soy José Miguel," aditionalText="desarrollador Full-Stack con JavaScript y TypeScript." />
+                <HGroup firstTitle="¡HOLA, QUÉ HAY!" secondTitle="Soy José Martín," aditionalText="desarrollador Full-Stack con JavaScript y TypeScript." />
 
                 <SectionBox title="Presentación">
                     <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                        Me llamo <TDS>José Miguel</TDS> y soy <TDS>desarrollador web Full-Stack</TDS>, titulado en Desarrollo de Aplicaciones Web (DAW). Trabajo con <TDS>JavaScript y TypeScript</TDS>: <TDS>Node.js y Express</TDS> en el backend y <TDS>React</TDS> en el frontend.
+                        Me llamo <TDS>José Martín</TDS> y soy <TDS>desarrollador web Full-Stack</TDS>, titulado en Desarrollo de Aplicaciones Web (DAW). Trabajo con <TDS>JavaScript y TypeScript</TDS>: <TDS>Node.js y Express</TDS> en el backend y <TDS>React</TDS> en el frontend.
                     </Typography>
                     <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
                         Hice las prácticas en <TDS>Jaraxa Software</TDS> como desarrollador frontend con React y TypeScript. Como proyecto de fin de grado desarrollé <CustomLink href="https://github.com/JoseLoder/Pawn-to-Pawn" target="_blank" rel="noreferrer">Pawn-to-Pawn</CustomLink>, una aplicación de gestión de pedidos y producción con una API REST en Express, PostgreSQL, autenticación con JWT y Docker.
