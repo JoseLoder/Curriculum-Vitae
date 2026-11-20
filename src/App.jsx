@@ -6,7 +6,7 @@ import ErrorPage from "./ErrorPage";
 import { Projects } from "./pages/Projects";
 import { Experience } from "./pages/Experience";
 import { ThemeContext } from "./contexts/ThemeContext";
-
+import { responsiveFontSizes } from "@mui/material"
 export const App = () => {
 
   const [mode, setMode] = useState('dark');
@@ -15,7 +15,7 @@ export const App = () => {
     setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
   };
 
-  const theme = createTheme({
+  const theme = responsiveFontSizes(createTheme({
     palette: {
       mode,
       primary: {
@@ -25,7 +25,7 @@ export const App = () => {
         main: '#ff5722',
       },
     },
-  });
+  }));
   const router = createHashRouter([
     {
       path: "/",
