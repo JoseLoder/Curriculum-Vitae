@@ -4,6 +4,7 @@ import {
     Toolbar,
     Typography,
     Box,
+    IconButton,
 } from "@mui/material";
 
 import TerminalIcon from '@mui/icons-material/Terminal';
@@ -66,31 +67,30 @@ export function MyHeader() {
                     </Box>
                     <ThemeToggleButton />
                     <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
-                        <Button
+                        <IconButton
                             color="inherit"
                             component={Link}
                             to="/"
                             sx={getButtonStyles("/")}
                         >
                             <Grade />
-                        </Button>
-                        <Button
+                        </IconButton>
+                        <IconButton
                             color="inherit"
                             component={Link}
                             to="/projects"
                             sx={getButtonStyles("/projects")}
                         >
                             <TerminalIcon />
-                        </Button>
-                        <Button
+                        </IconButton>
+                        <IconButton
                             color="inherit"
                             component={Link}
                             to="/experience"
                             sx={getButtonStyles("/experience")}
                         >
                             <HikingIcon />
-                        </Button>
-                        <ThemeToggleButton />
+                        </IconButton>
                     </Box>
                 </Toolbar>
 
