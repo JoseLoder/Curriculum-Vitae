@@ -109,7 +109,7 @@ export function Experience() {
 />
 
                         <AccordionSecondLevel
-                            job="Desarrollador de Front-End"
+                            job="Desarrollador de Front-End · Jaraxa Software, SL"
                             time="Febrero 2025 - Junio 2025"
                             ubication="Jaraxa Software, SL · Contrato de prácticas · Málaga, Andalucía, España · Híbrido"
                             functions="Desarrollo front-end enfocado en la creación de interfaces de usuario intuitivas y funcionales para aplicaciones web."
@@ -126,7 +126,7 @@ export function Experience() {
                             </>}
                         />
                         <AccordionSecondLevel
-                            job="Desarrollador Web"
+                            job="Desarrollador Web · Desarrollos personales"
                             time="Marzo 2024 - Febrero 2025"
                             ubication="Desarrollos personales · En remoto · Málaga, Andalucía, España"
                             functions="Desarrollo autodidacta con React y el planteamiento de mi proyecto final."
@@ -145,7 +145,7 @@ export function Experience() {
                     </AccordionFirstLevel>
                     <AccordionFirstLevel icon={<ConnectedTvIcon />} sector="SMR" skills="Soldadura de Componentes, Configuración de Impresoras y Reparaciones, Leer Documentación Técnica, . . .">
                         <AccordionSecondLevel
-                            job="Técnico SMR"
+                            job="Técnico SMR · Neotronics"
                             time="Octubre 2021 - Enero 2022"
                             ubication="Neotronics. Calle de la Sierra de Grazalema. Viator, Almería."
                             functions="Formación en centros de trabajo (FCT)"
