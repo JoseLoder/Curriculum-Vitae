@@ -9,10 +9,12 @@ import {
 
 import TerminalIcon from '@mui/icons-material/Terminal';
 import HikingIcon from '@mui/icons-material/Hiking';
+import DownloadIcon from '@mui/icons-material/Download';
 
 import { Link, useLocation } from "react-router-dom";
 import { Grade } from "@mui/icons-material";
 import { ThemeToggleButton } from "../ThemeToggleButton";
+import { assetUrl } from "../utils/assetUrl";
 
 export function MyHeader() {
     const location = useLocation();
@@ -32,10 +34,16 @@ export function MyHeader() {
             <AppBar position="fixed">
 
                 <Toolbar>
-
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: 'secondary.main' }}>
-                        J.M.M.S
-                    </Typography>
+                    <Button
+                        href={assetUrl("cv_jose-martin_full-stack.pdf")}
+                        download="CV_José-Martín_Full-Stack.pdf"
+                        variant="contained"
+                        color="secondary"
+                        startIcon={<DownloadIcon/>}
+                    >
+                        Descargar CV
+                    </Button>
+                    <Box sx={{ flexGrow: 1 }}/>
                     <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
                         <Button
                             color="inherit"
