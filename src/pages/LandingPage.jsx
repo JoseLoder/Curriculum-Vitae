@@ -24,7 +24,7 @@ export function LandingPage() {
                         Hice las prácticas en <TDS>Jaraxa Software</TDS> como desarrollador frontend con React y TypeScript. Como proyecto de fin de grado desarrollé <CustomLink href="https://github.com/JoseLoder/Pawn-to-Pawn" target="_blank" rel="noreferrer">Pawn-to-Pawn</CustomLink>, una aplicación de gestión de pedidos y producción con una API REST en Express, PostgreSQL, autenticación con JWT y Docker.
                     </Typography>
                     <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                        Empecé interesado por el front-end, pero lo que más me motiva es el <TDS>backend</TDS>: diseñar APIs, modelar bases de datos y resolver la lógica de negocio. Busco mi primera oportunidad como <TDS>desarrollador backend con Node.js o Full-Stack con JavaScript</TDS>.
+                        Empecé interesado por el front-end, pero lo que más me motiva es el <TDS>backend</TDS>: diseñar APIs, modelar bases de datos y resolver la lógica de negocio. Ahora también desarrollo <TDS>automatizaciones y agentes con IA</TDS> con n8n y estoy aprendiendo <TDS>testing con Vitest y TDD</TDS>. Busco mi primera oportunidad como <TDS>desarrollador backend con Node.js o Full-Stack con JavaScript</TDS>.
                     </Typography>
                 </SectionBox>
 
