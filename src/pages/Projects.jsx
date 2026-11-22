@@ -33,8 +33,9 @@ export function Projects() {
                             "Autorización por middlewares para 3 roles: cliente, operario y administrador.",
                             "Tipos compartidos entre API y frontend (@pawn-to-pawn/shared) con npm workspaces: los cambios de contrato se detectan al compilar.",
                             "PostgreSQL con consultas parametrizadas y connection pooling; entorno completo con Docker Compose y un Makefile para setup, logs y backups.",
+                            "En curso: tests unitarios y de integración con Vitest.",
                         ]}
-                        stack={["TypeScript", "Node.js", "Express", "PostgreSQL", "Zod", "JWT", "React 19", "TanStack Query", "styled-components", "Docker", "Vercel"]}
+                        stack={["TypeScript", "Node.js", "Express", "PostgreSQL", "Zod", "JWT", "React 19", "TanStack Query", "styled-components", "Vitest", "Docker", "Vercel"]}
                         code="https://github.com/JoseLoder/Pawn-to-Pawn"
                     />
                 </Box>
