@@ -13,6 +13,8 @@ import StoreIcon from '@mui/icons-material/Store';
 import CoPresentIcon from '@mui/icons-material/CoPresent';
 import ConnectedTvIcon from '@mui/icons-material/ConnectedTv';
 import WebIcon from '@mui/icons-material/Web';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import SchoolIcon from '@mui/icons-material/School';
 
 import { Box, List, ListItem, ListItemText } from "@mui/material";
 import { CardTechnology } from "../components/CardTechnology";
@@ -52,93 +54,33 @@ export function Experience() {
             <MyMain>
                 <SectionBox title="Experiencia Laboral Relacionada" >
                     <AccordionFirstLevel icon={<WebIcon />} sector="DAW" skills="Desarrollo de Aplicaciones Web">
-<AccordionSecondLevel
-    job="Desarrollador Web Full-Stack · Proyecto de Fin de Grado"
-    time="Febrero 2025 - Julio 2025"
-    ubication="Proyecto personal · En remoto · Málaga, Andalucía, España"
-    functions="Diseño y desarrollo completo de Pawn-to-Pawn, una aplicación de gestión de pedidos y producción (máquinas, materiales y productos) con acceso por roles."
-    description={<>
-        <p>Descripción detallada de las funciones realizadas:</p>
-        <ul>
-            <li>
-                <strong>Arquitectura monorepo en TypeScript:</strong> separé backend, frontend y un paquete
-                de <strong>tipos compartidos</strong> (<code>@pawn-to-pawn/shared</code>) con npm workspaces, de modo
-                que la API y la interfaz usan los mismos contratos de datos y los errores se detectan al compilar.
-            </li>
-            <li>
-                <strong>API REST con Node.js y Express:</strong> arquitectura en capas (rutas → controladores → modelos)
-                para 5 entidades, validación de cada petición con <strong>Zod</strong> y gestión centralizada de errores
-                con clases propias.
-            </li>
-            <li>
-                <strong>Autenticación y seguridad:</strong> login con <strong>JWT en cookies HTTP-only</strong>,
-                refresh tokens guardados en base de datos con renovación automática de sesión, contraseñas cifradas
-                con bcrypt y middlewares de autorización para <strong>3 roles</strong> (cliente, operario, administrador).
-            </li>
-            <li>
-                <strong>Base de datos PostgreSQL:</strong> diseño del modelo entidad-relación y relacional, consultas
-                parametrizadas con <code>pg</code> y connection pooling sobre Supabase.
-            </li>
-            <li>
-                <strong>Frontend con React 19:</strong> enrutado dinámico según el rol del usuario con React Router,
-                rutas protegidas, gestión del estado del servidor y caché con <strong>TanStack Query</strong> y
-                componentes reutilizables (tablas, formularios) con styled-components y Radix UI.
-            </li>
-            <li>
-                <strong>Flujo de negocio completo:</strong> los clientes crean pedidos, los operarios los asignan y
-                los pasan por <em>pendiente → preparación → completado</em> y el administrador gestiona usuarios,
-                máquinas, materiales y productos.
-            </li>
-            <li>
-                <strong>DevOps:</strong> dockericé el proyecto con <strong>Docker Compose</strong> (PostgreSQL, API y
-                frontend), automaticé las tareas con un <strong>Makefile</strong> (setup, logs, backups y restauración
-                de la base de datos) y desplegué en <strong>Vercel</strong>.
-            </li>
-            <li>
-                <strong>Análisis y documentación:</strong> diagramas de casos de uso, entidad-relación y modelo de
-                negocio, y documentación técnica del proyecto.
-            </li>
-        </ul>
-        <p>
-            <strong>Stack:</strong> TypeScript · React · Express · PostgreSQL · Zod · JWT · TanStack Query · styled-components · Docker
-        </p>
-        <p>
-            <CustomLink href="https://github.com/JoseLoder/Pawn-to-Pawn" target="_blank" rel="noreferrer">Ver código en GitHub →</CustomLink>
-        </p>
-    </>}
-/>
-
                         <AccordionSecondLevel
-                            job="Desarrollador de Front-End · Jaraxa Software, SL"
-                            time="Febrero 2025 - Junio 2025"
-                            ubication="Jaraxa Software, SL · Contrato de prácticas · Málaga, Andalucía, España · Híbrido"
-                            functions="Desarrollo front-end enfocado en la creación de interfaces de usuario intuitivas y funcionales para aplicaciones web."
+                            job="Automatizaciones y agentes con IA · Proyecto propio (MVP)"
+                            time="2026 - Actualidad"
+                            ubication="Proyecto propio · En remoto · Málaga, Andalucía, España"
+                            functions="MVP de una carta digital (SPA) para restaurantes con un chat de IA que recomienda platos según las preferencias y los alérgenos del cliente."
                             description={<>
                                 <p>Descripción detallada de las funciones realizadas:</p>
                                 <ul>
-                                    <li>Trabajo como desarrollador frontend enfocado en la creación de interfaces de usuario intuitivas y funcionales para aplicaciones web.</li>
-                                    <li>Me encargo del desarrollo front-end utilizando lenguajes como TypeScript y React para diseñar y programar componentes reutilizables.</li>
-                                    <li>Consumo la API REST del backend para integrar los datos de manera eficiente en las interfaces.</li>
-                                    <li>Colaboro estrechamente con el equipo de diseño para maquetar y prototipar las interfaces siguiendo los patrones y especificaciones de usabilidad.</li>
-                                    <li>Aplico mejores prácticas de desarrollo frontend para garantizar la mantenibilidad y escalabilidad del código.</li>
-                                    <li>Participo en la optimización de la experiencia de usuario (UX) y la interfaz de usuario (UI).</li>
+                                    <li>Flujos y webhooks en <strong>n8n</strong> que conectan la carta con el modelo de lenguaje.</li>
+                                    <li>Uso de <strong>OpenRouter</strong> para elegir el modelo más adecuado en cada paso del flujo.</li>
+                                    <li>Prototipado rápido con asistentes de IA para validar la idea.</li>
+                                    <li>Siguiente fase: cubrirlo con tests, refactorizarlo con <strong>TDD</strong> y evolucionarlo a SaaS con un panel para que el restaurante gestione su carta.</li>
                                 </ul>
                             </>}
                         />
                         <AccordionSecondLevel
-                            job="Desarrollador Web · Desarrollos personales"
-                            time="Marzo 2024 - Febrero 2025"
-                            ubication="Desarrollos personales · En remoto · Málaga, Andalucía, España"
-                            functions="Desarrollo autodidacta con React y el planteamiento de mi proyecto final."
+                            job="Desarrollador Front-End (prácticas) · Jaraxa Software, SL"
+                            time="Febrero 2025 - Junio 2025"
+                            ubication="Jaraxa Software, SL · Prácticas de DAW · Málaga, Andalucía, España · Híbrido"
+                            functions="Desarrollo front-end de interfaces de usuario para aplicaciones web con React y TypeScript."
                             description={<>
                                 <p>Descripción detallada de las funciones realizadas:</p>
                                 <ul>
-                                    <li>He estado trabajando con React de manera autodidacta, profundizando en el desarrollo de aplicaciones web modernas.</li>
-                                    <li>He realizado multitud de proyectos durante este período, siendo este curriculum vitae uno de los ejemplos más destacados.</li>
-                                    <li>Me centré en el diseño y arquitectura de bases de datos para mi proyecto final.</li>
-                                    <li>Desarrollé la lógica de negocio del proyecto industrial enfocado en la transformación #Industria-4.0 de mi proyecto final.</li>
-                                    <li>Apliqué metodologías de desarrollo ágil y patrones de diseño para garantizar código escalable y mantenible.</li>
-                                    <li>Experimenté con diferentes tecnologías del ecosistema React para ampliar mis conocimientos técnicos.</li>
+                                    <li>Desarrollé componentes reutilizables con <strong>React y TypeScript</strong>.</li>
+                                    <li>Integré la API REST del backend en las interfaces.</li>
+                                    <li>Maqueté y prototipé pantallas junto al equipo de diseño, siguiendo sus especificaciones de usabilidad.</li>
+                                    <li>Apliqué buenas prácticas para que el código fuera mantenible y escalable.</li>
                                 </ul>
                             </>}
                         />
@@ -209,10 +151,30 @@ export function Experience() {
                             functions="Encargado del Office y pinche del pasillo frío."
                         />
                     </AccordionFirstLevel>
+                    <AccordionFirstLevel icon={<LocalShippingIcon />} sector="Reparto" skills="Responsabilidad, Puntualidad, Organización de rutas, Trato con el cliente, . . . ">
+                        <AccordionSecondLevel
+                            job="Repartidor de bebidas"
+                            time="Junio 2026 - Septiembre 2026"
+                            ubication="Vía Temporing ETT."
+                            functions="Reparto de barriles de cerveza y refrescos a hostelería."
+                        />
+                    </AccordionFirstLevel>
                     <AccordionFirstLevel icon={<FactoryIcon />} sector="Industria" skills="Responsabilidad en la Seguridad, Apoyo con el Equipo, Control de la Fatiga, Trabajo Sistemático y Metódico, . . . ">
                         <AccordionSecondLevel
+                            job="Operario de lijado y lacado"
+                            time="Diciembre 2025 - Mayo 2026"
+                            ubication="Sonova (vía Flexiplan ETT)."
+                            functions="Lijado y lacado de audífonos con control de calidad del acabado."
+                        />
+                        <AccordionSecondLevel
+                            job="Operario"
+                            time="Septiembre 2025 - Noviembre 2025"
+                            ubication="Procter & Gamble (vía Randstad ETT)."
+                            functions="Contratos por días en planta."
+                        />
+                        <AccordionSecondLevel
                             job="Mozo de almacén"
-                            time="Noviembre 2023 - Marzo 2024"
+                            time="Noviembre 2023 - Febrero 2024"
                             ubication="Grupo Hefame. Calle El Nogal, 16, Huércal de Almería, Almería."
                             functions="Preparación y reposición de pedidos de productos farmacéuticos."
                         />
@@ -223,7 +185,13 @@ export function Experience() {
                             functions="Preparación de pedidos de bobinas de plástico agrícola."
                         />
                     </AccordionFirstLevel>
-                    <AccordionFirstLevel icon={<StoreIcon />} sector="Reponedor" skills="Atención al Cliente, Resolución de Problemas, División de tareas, Gestión del tiempo, Control de Calidad, Control de Stock,  . . .">
+                    <AccordionFirstLevel icon={<StoreIcon />} sector="Comercio" skills="Atención al Cliente, Resolución de Problemas, División de tareas, Gestión del tiempo, Control de Calidad, Control de Stock,  . . .">
+                        <AccordionSecondLevel
+                            job="Pescadero"
+                            time="Diciembre 2024 - Enero 2025"
+                            ubication="Hipermercado Carrefour."
+                            functions="Atención al cliente, preparación del género y control de calidad en pescadería."
+                        />
                         <AccordionSecondLevel
                             job="Frutero"
                             time="Mayo 2022 - Noviembre 2022"
@@ -281,6 +249,22 @@ export function Experience() {
                             </ListItem>
                             <ListItem>
                                 <ListItemText primary="Elaborar documentación técnica y administrativa del sistema, elaborar presupuestos y asesorar al cliente." />
+                            </ListItem>
+                        </List>
+                    </AccordionFirstLevel>
+                    <AccordionFirstLevel icon={<SchoolIcon />} sector="Cursos de IBM en Coursera" >
+                        <List sx={{ padding: 0 }}>
+                            <ListItem>
+                                <ListItemText
+                                    primary={
+                                        <CustomLink href="https://coursera.org/verify/BP34Z9JBUMB5" target="_blank" rel="noreferrer">
+                                            {"Node.js & MongoDB: Developing Back-end Database Applications (noviembre 2026)"}
+                                        </CustomLink>
+                                    }
+                                />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="Cloud Native, DevOps, Agile y NoSQL (en curso)" />
                             </ListItem>
                         </List>
                     </AccordionFirstLevel>
