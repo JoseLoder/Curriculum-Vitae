@@ -6,6 +6,7 @@ import { CardProject } from "../components/CardProject";
 import { HGroup } from "../components/HGroup";
 import { FeaturedProject } from "../components/FeaturedProject";
 import { SectionBox } from "../components/SectionBox";
+import { assetUrl } from "../utils/assetUrl";
 
 export function Projects() {
     return (
@@ -20,10 +21,31 @@ export function Projects() {
                 />
                 <Box
                     component={'section'}
-                    sx={{ alignSelf: 'center', display: 'flex', justifyContent: 'center', width: '100%', px: { xs: 2, md: 5 }, mb: 4 }}
+                    sx={{ alignSelf: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4, width: '100%', px: { xs: 2, md: 5 }, mb: 4 }}
                 >
                     <FeaturedProject
-                        label="Proyecto destacado · Proyecto de Fin de Grado"
+                        label="Proyecto propio · MVP desplegado"
+                        title="Carta IA"
+                        subtitle="Carta digital para restaurantes con un asistente de IA que entiende alergias, dietas y gustos"
+                        description="El cliente pregunta en lenguaje natural (por ejemplo, «soy intolerante a la lactosa» o «la morcilla no me gusta») y la carta se filtra y marca los platos recomendados. El restaurante gestiona su carta desde un panel propio. Empezó como prototipo en n8n y lo llevé a código propio con desarrollo asistido por IA: yo decidí el producto, las reglas y la arquitectura. Ahora estoy estudiando el código a fondo para seguir evolucionándolo con TDD."
+                        highlights={[
+                            "Regla de diseño: el modelo propone, nunca decide. El filtrado de alérgenos es SQL determinista y los alérgenos los confirma una persona del restaurante.",
+                            "Orquestador fijo, no agente: extracción con tool calling, diccionario de 370 términos (es/en), búsqueda semántica con embeddings y pgvector, y redacción. De 1 a 3 llamadas al modelo por mensaje, unos 0,0004 $ cada uno.",
+                            "Multicliente con Supabase (PostgreSQL) y Row Level Security: cada restaurante solo ve sus datos. Acceso al panel con Google.",
+                            "Privacidad por diseño: no se guardan alergias ni conversaciones, y la base de datos está en la UE.",
+                            "Panel del restaurante: platos con los 14 alérgenos UE, escaneo de la carta con IA (fotos o PDF) con revisión humana, QR imprimible y estado «agotado» al momento.",
+                            "API en Node.js + Express sobre Cloudflare Workers, con cupos de uso, cabeceras de seguridad y suscripciones con Paddle (webhooks con firma verificada). n8n queda para avisos e informes de gasto y uso.",
+                        ]}
+                        stack={["React", "Vite", "Node.js", "Express", "Supabase", "PostgreSQL", "pgvector", "RAG", "OpenRouter", "Cloudflare Workers", "Paddle", "n8n"]}
+                        demo="https://carta-ia.martin-silva-jose.workers.dev/demo"
+                        demoLabel="Probar la demo"
+                        video={assetUrl("carta-ia-demo.mp4")}
+                        poster={assetUrl("carta-ia-poster.jpg")}
+                        links={[{ label: "Ver arquitectura", href: assetUrl("carta-ia-arquitectura.svg") }]}
+                        privateNote="Código privado: acceso bajo petición"
+                    />
+                    <FeaturedProject
+                        label="Proyecto de Fin de Grado"
                         title="Pawn-to-Pawn"
                         subtitle="Aplicación full-stack de gestión de pedidos y producción con control de acceso por roles"
                         description="Monorepo en TypeScript con una API REST en Express, frontend en React y un paquete de tipos compartidos. Los clientes crean pedidos, los operarios los asignan y los llevan de pendiente a preparación y a completado, y el administrador gestiona usuarios, productos, materiales y máquinas."
