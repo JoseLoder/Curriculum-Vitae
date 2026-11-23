@@ -2,15 +2,15 @@
 
 Mi primer portfolio personal, desarrollado con **React** y **Material UI**. Recoge mi presentación, mis proyectos y mi experiencia profesional y académica.
 
-🔗 **Demo:** https://joseloder.github.io/Curriculum-Vitae/
+🔗 **Web:** https://joseloder.pro
 
 ## Stack
 
 - **React 18** + **Vite**
 - **Material UI** (componentes, iconos y tema claro/oscuro)
-- **React Router** (`createHashRouter`, compatible con GitHub Pages)
+- **React Router** (`createHashRouter`)
 - **ESLint** para la calidad del código
-- **GitHub Actions** para el despliegue automático en GitHub Pages
+- **Vercel** para el despliegue, con dominio propio
 
 ## Funcionalidades
 
@@ -43,7 +43,7 @@ npm run lint      # análisis con ESLint
 
 ## Despliegue
 
-Cada push a `main` lanza el workflow [`.github/workflows/main.yml`](.github/workflows/main.yml), que compila el proyecto y lo publica en GitHub Pages.
+Cada push a `main` se despliega automáticamente en [Vercel](https://vercel.com), en el dominio [joseloder.pro](https://joseloder.pro).
 
 ## Contacto
 
