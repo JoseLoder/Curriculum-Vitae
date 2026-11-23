@@ -14,10 +14,12 @@ import {
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
 import PropTypes from "prop-types";
 
 // Tarjeta ancha para el proyecto principal del portfolio
-export function FeaturedProject({ label, title, subtitle, description, highlights, stack, code, demo = "" }) {
+export function FeaturedProject({ label, title, subtitle, description, highlights, stack, code = "", demo = "", demoLabel = "Demo", video = "", poster = "", privateNote = "", links = [] }) {
     return (
         <Card
             component="article"
@@ -28,6 +30,19 @@ export function FeaturedProject({ label, title, subtitle, description, highlight
                 borderColor: 'secondary.main',
             }}
         >
+            {video && (
+                <Box
+                    component="video"
+                    src={video}
+                    poster={poster || undefined}
+                    controls
+                    muted
+                    playsInline
+                    preload="none"
+                    aria-label={`Vídeo de demostración de ${title}`}
+                    sx={{ display: 'block', width: '100%', aspectRatio: '16 / 9', bgcolor: '#0b1211' }}
+                />
+            )}
             <CardContent sx={{ p: { xs: 2, md: 4 } }}>
                 <Typography variant="overline" color="secondary">
                     {label}
@@ -60,14 +75,26 @@ export function FeaturedProject({ label, title, subtitle, description, highlight
                 </Box>
             </CardContent>
 
-            <CardActions sx={{ px: { xs: 2, md: 4 }, pb: 3, gap: 1 }}>
-                <Button variant="contained" startIcon={<GitHubIcon />} href={code} target="_blank" rel="noreferrer">
-                    Ver código
-                </Button>
-                {demo && (
-                    <Button variant="outlined" color="secondary" startIcon={<LaunchIcon />} href={demo} target="_blank" rel="noreferrer">
-                        Demo
+            <CardActions sx={{ px: { xs: 2, md: 4 }, pb: 3, gap: 1, flexWrap: 'wrap' }}>
+                {code && (
+                    <Button variant="contained" startIcon={<GitHubIcon />} href={code} target="_blank" rel="noreferrer">
+                        Ver código
                     </Button>
+                )}
+                {demo && (
+                    <Button variant={code ? "outlined" : "contained"} color="secondary" startIcon={<LaunchIcon />} href={demo} target="_blank" rel="noreferrer">
+                        {demoLabel}
+                    </Button>
+                )}
+                {links.map((link) => (
+                    <Button key={link.href} variant="text" color="secondary" startIcon={<AccountTreeOutlinedIcon />} href={link.href} target="_blank" rel="noreferrer">
+                        {link.label}
+                    </Button>
+                ))}
+                {privateNote && (
+                    <Typography variant="body2" color="text.secondary" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                        <LockOutlinedIcon fontSize="small" /> {privateNote}
+                    </Typography>
                 )}
             </CardActions>
         </Card>
@@ -81,6 +108,11 @@ FeaturedProject.propTypes = {
     description: PropTypes.string.isRequired,
     highlights: PropTypes.arrayOf(PropTypes.string).isRequired,
     stack: PropTypes.arrayOf(PropTypes.string).isRequired,
-    code: PropTypes.string.isRequired,
+    code: PropTypes.string,
     demo: PropTypes.string,
+    demoLabel: PropTypes.string,
+    video: PropTypes.string,
+    poster: PropTypes.string,
+    privateNote: PropTypes.string,
+    links: PropTypes.arrayOf(PropTypes.shape({ label: PropTypes.string.isRequired, href: PropTypes.string.isRequired })),
 };
