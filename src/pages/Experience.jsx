@@ -55,17 +55,19 @@ export function Experience() {
                 <SectionBox title="Experiencia Laboral Relacionada" >
                     <AccordionFirstLevel icon={<WebIcon />} sector="DAW" skills="Desarrollo de Aplicaciones Web">
                         <AccordionSecondLevel
-                            job="Automatizaciones y agentes con IA · Proyecto propio (MVP)"
+                            job="Carta IA · Proyecto propio (MVP desplegado)"
                             time="2026 - Actualidad"
                             ubication="Proyecto propio · En remoto · Málaga, Andalucía, España"
-                            functions="MVP de una carta digital (SPA) para restaurantes con un chat de IA que recomienda platos según las preferencias y los alérgenos del cliente."
+                            functions="Carta digital para restaurantes con un asistente de IA que entiende alergias, dietas y gustos, y un panel para que el restaurante gestione su carta."
                             description={<>
                                 <p>Descripción detallada de las funciones realizadas:</p>
                                 <ul>
-                                    <li>Flujos y webhooks en <strong>n8n</strong> que conectan la carta con el modelo de lenguaje.</li>
-                                    <li>Uso de <strong>OpenRouter</strong> para elegir el modelo más adecuado en cada paso del flujo.</li>
-                                    <li>Prototipado rápido con asistentes de IA para validar la idea.</li>
-                                    <li>Siguiente fase: cubrirlo con tests, refactorizarlo con <strong>TDD</strong> y evolucionarlo a SaaS con un panel para que el restaurante gestione su carta.</li>
+                                    <li>Empezó como prototipo en <strong>n8n</strong>; lo llevé a código propio con desarrollo asistido por IA, decidiendo yo el producto, las reglas y la arquitectura.</li>
+                                    <li>Regla de diseño: el modelo propone, nunca decide. El filtrado de alérgenos es <strong>SQL determinista</strong> y los alérgenos los confirma una persona del restaurante.</li>
+                                    <li>Orquestador fijo, no agente: extracción con tool calling, diccionario de sinónimos, búsqueda semántica con <strong>embeddings y pgvector</strong> y redacción de la respuesta.</li>
+                                    <li>Multicliente con <strong>Supabase (PostgreSQL) y Row Level Security</strong>; API en <strong>Node.js + Express</strong> sobre Cloudflare Workers y suscripciones con Paddle.</li>
+                                    <li><strong>n8n</strong> para los avisos y los informes de gasto y uso.</li>
+                                    <li>Ahora estudio el código a fondo para seguir evolucionándolo con <strong>TDD</strong>.</li>
                                 </ul>
                             </>}
                         />
