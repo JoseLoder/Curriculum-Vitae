@@ -21,10 +21,13 @@ export function LandingPage() {
                         Me llamo <TDS>José Martín</TDS> y soy <TDS>desarrollador web Full-Stack</TDS>, titulado en Desarrollo de Aplicaciones Web (DAW). Trabajo con <TDS>JavaScript y TypeScript</TDS>: <TDS>Node.js y Express</TDS> en el backend y <TDS>React</TDS> en el frontend.
                     </Typography>
                     <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                        Hice las prácticas en <TDS>Jaraxa Software</TDS> como desarrollador frontend con React y TypeScript. Como proyecto de fin de grado desarrollé <CustomLink href="https://github.com/JoseLoder/Pawn-to-Pawn" target="_blank" rel="noreferrer">Pawn-to-Pawn</CustomLink>, una aplicación de gestión de pedidos y producción con una API REST en Express, PostgreSQL, autenticación con JWT y Docker.
+                        Hice las prácticas en <TDS>Jaraxa Software</TDS> como desarrollador frontend con React y TypeScript. Como proyecto de fin de grado desarrollé <CustomLink href="https://github.com/JoseLoder/Pawn-to-Pawn" target="_blank" rel="noreferrer">Pawn-to-Pawn</CustomLink>, una aplicación de gestión de pedidos y producción con una API REST en Express, PostgreSQL, autenticación con JWT y Docker, a la que ahora estoy añadiendo tests con <TDS>Vitest</TDS>.
                     </Typography>
                     <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
-                        Empecé interesado por el front-end, pero lo que más me motiva es el <TDS>backend</TDS>: diseñar APIs, modelar bases de datos y resolver la lógica de negocio. Ahora también desarrollo <TDS>automatizaciones y agentes con IA</TDS> con n8n y estoy aprendiendo <TDS>testing con Vitest y TDD</TDS>. Busco mi primera oportunidad como <TDS>desarrollador backend con Node.js o Full-Stack con JavaScript</TDS>.
+                        Mi proyecto actual es <CustomLink href="https://carta-ia.martin-silva-jose.workers.dev/demo" target="_blank" rel="noreferrer">Carta IA</CustomLink>, una carta digital para restaurantes con un asistente de IA que entiende alergias, dietas y gustos. Lo diseñé con una regla clara: <TDS>la IA propone, pero no decide</TDS>; el filtrado de alérgenos se hace con SQL determinista. Está construido con Node.js, Express, Supabase con pgvector y Cloudflare Workers.
+                    </Typography>
+                    <Typography variant="p" component="p" sx={{ marginBottom: "10px" }}>
+                        Empecé interesado por el front-end, pero lo que más me motiva es el <TDS>backend y la ingeniería con IA</TDS>: diseñar APIs, modelar datos y construir sistemas con modelos de lenguaje que sean fiables. Busco mi primera oportunidad como <TDS>desarrollador backend con Node.js o Full-Stack con JavaScript y TypeScript</TDS>.
                     </Typography>
                 </SectionBox>
 
